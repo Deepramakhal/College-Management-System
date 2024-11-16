@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ html,body{
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    max-width: 100vw;
+    min-height:fit-content;
+}
+header{
+    height: 20%;
+}
+main{
+    height: 60%;
+}
+footer{
+    height: 20%;
+}
+h1{
+    padding-bottom: 2%;
+    text-align: center;
+}
+/* for head section */
+nav{
+    background-color: rgba(0, 0, 77, 0.952);
+    height: 20%;
+    width: 100%;
+}
+nav ul{
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+}
+.active{
+    position: relative;
+    display: inline-flex;
+    line-height: 20px;
+    padding: 15px;
+    margin: 10px;
+}
+.active a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: larger;
+}
+.active:hover{
+    cursor: pointer;
+    background-color: rgb(1, 1, 54);
+    border-radius: 3px;
+}
+.sub-menu{
+    display:none; 
+} 
+.active:hover .sub-menu{
+    display:inline-block;
+    position: absolute;
+    /* z-index: 1; */
+    background-color: rgb(0, 0, 77 );
+    margin-top: 40px;
+    min-width: 150px;
+    padding: 8px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+     
+
+}
+.sub-menu ul li:hover{
+    cursor: pointer;
+    background-color: rgb(1, 1, 54);
+    border-radius: 3px;
+}
+/* for manu section  */
+
+#img{
+    display: flex;
+    /* position: relative; */
+    height: 400px;
+    width: 100%;
+    color: black;
+    justify-content: center;
+    align-items:center ;
+    font-size: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4) ,rgba(0,0,0,0.4)),url("https://img.freepik.com/premium-photo/college-campus-concept-illustration_1029473-451505.jpg?w=996");
+}
+#about-college{
+    /* margin: 10px; */
+    position: relative;
+    /* height: 100%; */
+    z-index: 1;
+    width: 70%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: black solid 5px;
+    /* overflow-y:scroll; */
+    box-sizing: content-box;
+}
+#notice{
+    width: 40%;
+    height: 300px;
+    overflow-y: scroll;
+    padding: 20px;
+    border: 7px solid black;
+    & ul{
+        width: 100%;
+        height: 100%;
+       & li{
+        list-style: none; 
+        
+       }
+    }
+}
+
+#paragraph{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & h1{
+        padding-top: 20px;
+}
+}
+
+#paragraph p{
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    height: 300px;
+}
+#sec-1 { 
+    display: flex;
+    height: 300px;
+    padding-top: 10px;
+}
+#paragraph #btn{
+    background-color:rgba(15, 8, 134, 0.952) ;
+    color: #ffffff;
+    width: fit-content;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 8px;
+}
+.about img{
+    /* display: flex; */
+    /* height: 300px; */
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    /* padding: 20px; */
+    border: 10px solid black;
+    border-radius: 10px;
+    /* width: 50px; */
+    width: 40%;
+    height: 40%;
+    margin-left: 20px;
+}
+.about p{
+    width: 40%;
+    height: 40%;
+    margin-left: 20px;
+
+}
+@media screen and (max-width:600px) {
+    body{
+        height: auto;
+        width: 100%;
+    }
+    #sec-1{
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        & #paragraph{
+            width: 100%;
+            height: fit-content;
+        }
+        & #notice{
+            height: 100%;
+            width: 100%;
+            & ul{
+                height: 100px;
+                overflow-y: scroll;
+                width: 100;
+            }
+        }
+    }
+    #notice ul li{
+        text-align: center;
+    }
+
+}
