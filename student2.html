@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="principal2.css">
+</head>
+<body>
+    <script src="hod2.js"></script>
+    <header>
+        <div class="header">
+            <div class="header-center">
+                <h1 class="course-name">Bachelor of Computer Application</h1>
+                <p class="batch-name">2022-25</p>
+            </div>
+            <div class="header-button">
+                <button class="logout-btn">Logout</button>
+                <button class="dashboard-btn">Dashboard</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="student-list">
+            <h2>Student Details</h2>
+            <div class="table-header">
+                <span class="cell id">Profile Picture</span>
+                <span class="cell">ID</span>
+                <span class="cell">Name</span>
+                <span class="cell">Email</span>
+                <span class="cell">Phone</span>
+                <span class="cell action">Action</span>
+            </div>
+            <div class="table-content">
+                <span class="cell"><img src="D:\Project\IMG_20220725_234559.jpg" alt="HOD Picture"></span>
+                <span class="cell">1</span>
+                <span class="cell">John Doe</span>
+                <span class="cell">dD4Yt@example.com</span>
+                <span class="cell">1234567890</span>
+                <span class="cell">
+                        <button class="remove-btn" onclick="removeStudent()">Remove</button>
+                </span>
+            </div>
+        </div>
+    </main>
+    <div class="confirmation">
+        <div class="confirmation-popup">
+            <p>Are you sure you want to remove this student?</p>
+            <span class="close" onclick="closeConfirmation()">×</span>
+            <button class="yes-btn">Confirm</button>
+            <button class="no-btn">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>

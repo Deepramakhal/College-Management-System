@@ -3,19 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Principal</title>
     <link rel="stylesheet" href="principal2.css"></link:principal>
 </head>
 <body>
-    <script src="principal2.js"></script>
+    <script src="hod2.js"></script>
     <header>
         <div class="header">
-            <img src="abc.png" alt="Logo" class="logo">
             <div class="header-center">
-                <h1 class="college-name">College Name</h1>
-                <p class="welcome-text">Welcome, Principal</p>
+                <h1 class="course-name">Bacherlor of Computer Application</h1>
+            </div>
+            <div class="header-button">
+                <button class="logout-btn">Logout</button>
+                <button class="dashboard-btn">Dashboard</button>
             </div>
         </div>
     </header>
+    <main>  
+        <div class="hod-details">
+            <h2>Head of Department Details</h2>
+            <div class="table-header">
+                <span class="cell id">Profile Picture</span>
+                <span class="cell">ID</span>
+                <span class="cell">Name</span>
+                <span class="cell">Email</span>
+                <span class="cell">Phone</span>
+                <span class="cell action">Action</span>
+            </div>
+            <div class="table-content">
+                <span class="cell"><img src="D:\Project\IMG_20220725_234559.jpg" alt="HOD Picture"></span>
+                <span class="cell">1</span>
+                <span class="cell">John Doe</span>
+                <span class="cell">dD4Yt@example.com</span>
+                <span class="cell">1234567890</span>
+                <span class="cell">
+                        <button class="remove-btn" onclick="removeStudent()">Remove</button>
+                </span>
+            </div>
+        </div>
+
+        <div class="faculty-list">
+            <h2>Faculty List</h2>
+            <div class="table-header">
+                <span class="cell id">Profile Picture</span>
+                <span class="cell">ID</span>
+                <span class="cell">Name</span>
+                <span class="cell">Email</span>
+                <span class="cell">Phone</span>
+                <span class="cell action">Action</span>
+            </div>
+            <div class="table-content">
+                <span class="cell"><img src="profile.jpg" alt="Faculty Picture"></span>
+                <span class="cell">1</span>
+                <span class="cell">John Doe</span>
+                <span class="cell">dD4Yt@example.com</span>
+                <span class="cell">1234567890</span>
+                <span class="cell">
+                    <button class="remove-btn" onclick="removeStudent()">Remove</button>
+                </span>
+            </div>
+            <div class="table-content">
+                <span class="cell"><img src="profile.jpg" alt="Faculty Picture"></span>
+                <span class="cell">2</span>
+                <span class="cell">Jane Doe</span>
+                <span class="cell">dD4Yt@example.com</span>
+                <span class="cell">1234567890</span>
+                <span class="cell">
+                    <button class="remove-btn" onclick="removeStudent()">Remove</button>
+                </span>
+            </div>
+            <div class="table-content">
+                <span class="cell"><img src="profile.jpg" alt="Faculty Picture"></span>
+                <span class="cell">3</span>
+                <span class="cell">John Doe</span>
+                <span class="cell">dD4Yt@example.com</span>
+                <span class="cell">1234567890</span>
+                <span class="cell">
+                    <button class="remove-btn" onclick="removeStudent()">Remove</button>
+                </span>
+            </div>
+            <div class="table-content">
+                <span class="cell"><img src="profile.jpg" alt="Faculty Picture"></span>
+                <span class="cell">4</span>
+                <span class="cell">Jane Doe</span>
+                <span class="cell">dD4Yt@example.com</span>
+                <span class="cell">1234567890</span>
+                <span class="cell">
+                    <button class="remove-btn" onclick="removeStudent()">Remove</button>
+                </span>
+            </div> 
+            <div class="table-content">
+                <span class="cell"><img src="profile.jpg" alt="Faculty Picture"></span>
+                <span class="cell">5</span>
+                <span class="cell">John Doe</span>
+                <span class="cell">dD4Yt@example.com</span>
+                <span class="cell">1234567890</span>
+                <span class="cell">
+                    <button class="remove-btn" onclick="removeStudent()">Remove</button>
+                </span>
+            </div>
+        </div>
+        <div class="batch-list">
+            <h2>Batch List</h2>
+            <div class="batch-button">
+                <button class="batch-btn" data-batch="2022-25">2022-25</button>
+                <button class="batch-btn" data-batch="2023-27">2023-27</button>
+                <button class="batch-btn" data-batch="2024-28">2024-28</button>
+                <button class="batch-btn" data-batch="2025-29">2025-29</button>
+                <button class="batch-btn" data-batch="2026-30">2026-30</button>
+                <button class="batch-btn">Add Batch</button>
+            </div>
+        </div>
+    </main>
+    <div class="confirmation">
+        <div class="confirmation-popup">
+            <p>Are you sure you want to remove?</p>
+            <span class="close" onclick="closeConfirmation()">×</span>
+            <button class="yes-btn">Confirm</button>
+            <button class="no-btn">Cancel</button>
+        </div>
+    </div>
 </body>
 </html>

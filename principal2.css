@@ -1,0 +1,252 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #9f39e3;
+    color: #ffffff;
+    padding: 10px;
+    height: 15vh;
+}
+
+.header-center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+}
+
+.header-button {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+    width: 20%;
+    padding-right: 1%;
+}
+
+.dashboard-btn {
+    background-color: #ffffff;
+    color: #0000ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 5px;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.dashboard-btn:hover {  
+    background-color: #0000ff;
+    color: #ffffff;
+}
+
+/* Main Content Styling */
+
+.faculty-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    cursor: text;
+}
+
+.hod-details ,.batch-list , .student-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    cursor: text;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 100px repeat(auto-fit, minmax(100px, 1fr));
+    width: 100%;
+    height: 60px;
+    font-weight: bold;
+    font-size: larger;
+    & .cell {
+        background-color: #4ddaf9;
+    }
+
+}
+
+.table-content {
+    display: grid;
+    grid-template-columns: 100px repeat(auto-fit, minmax(100px, 1fr));
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid #989292;
+    max-width: 100%;
+    min-height: fit-content;
+    word-wrap: break-word;
+    color: #333;
+}
+
+img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    cursor: grab;
+    transition: transform 0.3s ease;
+}
+
+img:active {
+    transform: scale(1.2);
+}
+
+.id {
+    border-radius: 20px 0 0 0;
+}
+
+.action {
+    border-radius: 0 20px 0 0;
+}
+
+.logout-btn , .remove-btn {
+    background-color: #ffffff;
+    color: #ff0000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 5px;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.logout-btn:hover , .remove-btn:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.batch-btn {
+    background-color: #ffffff;
+    color: #0000ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 5px;
+    width: 30vw;
+    height: 10vh;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.batch-btn:hover {
+    background-color: #0000ff;
+    color: #ffffff;
+}
+
+.confirmation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-popup {
+    background-color: #fff;
+    padding: 20px;
+    height: 250px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    flex-wrap: wrap;
+
+    & .yes-btn {
+        background-color: #ffffff;
+        color: #00b300;
+        border: 2px solid #00b300;
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        width: 45%;
+        font-weight: bold;
+        font-size: larger;
+    }
+    & .no-btn {
+        background-color: #ffffff;
+        color: #ff0000;
+        border: 2px solid #ff0000;
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        width: 45%;
+        font-weight: bold;
+        font-size: larger;
+    }
+    & .yes-btn:hover {
+        background-color: #00b300;
+        color: #ffffff;
+    }
+    & .no-btn:hover {
+        background-color: #ff0000;
+        color: #ffffff;
+    }
+    & p {
+        width: calc(100% - 50px);
+    }
+    & span{
+        width: 20px;
+        cursor: pointer;
+        margin-bottom: 90px;
+        margin-left: 10px;
+    }
+}
