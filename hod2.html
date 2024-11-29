@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head of Department</title>
+    <link rel="stylesheet" href="hod2.css">
+</head>
+<body>
+    <script src="hod2.js"></script>
+    <header>
+        <div class="header">
+            <div class="header-center">
+                <h1 class="course-name">Bacherlor of Computer Application</h1>
+                <h3 class="batch-name">Batch: 2022-25</h3>
+            </div>
+            <div class="header-button">
+                <button class="logout-btn">Logout</button>
+                <button class="dashboard-btn">Dashboard</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="student">
+            <h2>Student List</h2>
+            <div class="search-bar">
+                <input type="search" name="search" id="student-search" placeholder="Student search bar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="true" class="bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </div>
+        </div>
+    
+        <div class="student-list">
+            <div class="table-header">
+                <span class="cell id">ID</span>
+                <span class="cell">Name</span>
+                <span class="cell">Date Of Birth</span>
+                <span class="cell">Email</span>
+                <span class="cell">Phone</span>
+                <span class="cell">Address</span>
+                <span class="cell">Gender</span>
+                <span class="cell">Semister</span>
+                <span class="cell">Gaurdian Name</span>
+                <span class="cell action">Action</span>
+            </div>
+            <div class="table-content">
+                <span class="cell">1</span>
+                <span class="cell">John Doe</span>
+                <span class="cell">01-01-2000</span>
+                <span class="cell">dD4Yt@example.com</span>
+                <span class="cell">1234567890</span>
+                <span class="cell">123 Main Street, Anytown, USA </span>
+                <span class="cell">Male</span>
+                <span class="cell">Semester 1</span>
+                <span class="cell">Jane Doe</span>
+                <span class="cell">
+                    <button class="edit-btn">Edit</button>
+                    <button class="remove-btn" onclick="removeStudent()">Remove</button>
+                </span>
+            </div>
+            <div class="table-content">
+                <span class="cell">2</span>
+                <span class="cell">Jane Doe</span>
+                <span class="cell">01-01-2000</span>
+                <span class="cell">dD4Yt@example.com</span>
+                <span class="cell">1234567890</span>
+                <span class="cell">123 Main Street, Anytown, USA</span>
+                <span class="cell">Female</span>
+                <span class="cell">Semester 1</span>
+                <span class="cell">John Doe</span>
+                <span class="cell">
+                    <button class="edit-btn">Edit</button>
+                    <button class="remove-btn" onclick="removeStudent()">Remove</button>
+                </span>
+            </div>
+        </div>
+    </main>
+    <div class="confirmation">
+        <div class="confirmation-popup">
+            <p>Are you sure you want to remove this student?</p>
+            <span class="close" onclick="closeConfirmation()">×</span>
+            <button class="yes-btn">Yes</button>
+            <button class="no-btn">No</button>
+        </div>
+    </div>
+</body>
+</html>
