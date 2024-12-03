@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal Dashboard</title>
+    <link rel="stylesheet" href="Principal_dash.css">
+</head>
+<body>
+    <header>
+            <div class="logo">
+                <img src="https://img.freepik.com/premium-photo/university-college-graduate-campus-logo-design-inspiration-template-design-emblem-school_1029473-590941.jpg?w=996" alt="College Logo" id="College-Logo">
+            </div>
+            <h1><b>ABC College</b></h1>
+
+            <div id= "Log-div"> 
+                <button class="logout-button">Logout</button>
+            </div>
+    </header>
+
+    <main>
+        <!-- <div id="maindiv"> -->
+    <div class="sidebar">  
+        <div class="profile">       
+            <img src="https://www.joonsquare.com/usermanage/image/business/techno-india-university-kolkata-16224/techno-india-university-kolkata-logo.jpg" alt="#" class="img">
+            <p>sanchari </p> 
+            <p>principal</p>
+            <p>Email: abc@mail</p>
+            <button class="btn btn--primary">Edit</button> 
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h2><U>Operations</U></h2>
+        <div class="courses">
+            <div class="Courses-Button">
+            <button onclick="openRegPopup()" id="open-popup">Exam Registration</button> 
+            <button>Add HOD</button>     
+            <button onclick="openAddNoticePopup()">Add Notice </button>    
+            <button onclick="openviewResultPopup()">View Result</button>        
+            <button>Add Faculty </button>
+            <button onclick="openProfilePopup()" id="profileButton">View Profile</button>
+            <button  onclick="openCoursePopup()"  id="popupBtn">Current Courses</button> 
+            <button onclick="openAddStudentPopup()">Add Student</button>        
+            <button><a href="https://www.antiragging.in/affidavit_registration_disclaimer.html" target="_blank">Anti Ragging</a></button>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->
+</main>
+
+<!-- popup  -->
+ <!-- exam registration  -->
+
+<div id="Reg-Popup">
+  <div class="Reg-Enrol_popup">
+      <button onclick="closeRegPopup()" id="close-regpopup">&times;</button>
+      <div><h1>Admission/ Enrollment/Exam Form</h1></div>
+      <hr color="black" height="2px">
+      <table class="table">
+          <thead>
+            <tr>
+              <th>Operation</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Enable admission ? </td>
+              <td><button class="start-btn">Start</button>
+                  <button class="stop-btn">Stop</button></td>
+            </tr>
+            <tr>
+              <td>Enable  enrollment?</td>
+              <td><button class="start-btn">Start</button>
+                  <button class="stop-btn">Stop</button></td>
+            </tr>
+            <tr>
+              <td>Enable exam form?    </td>
+              <td><button class="start-btn">Start</button>
+                  <button class="stop-btn">Stop</button></td>
+            </tr>
+
+          </tbody>
+        </table>
+  </div>
+</div>
+
+<!-- add notice  -->
+
+<div id="Add-Notice">
+  <div class="Add_noticepop">
+      <button onclick="closeAddPopup()" id="close-addpopup">&times;</button>
+      <div><h2>Add Notice</h2 ></div>
+      <hr color="black" height="2px">
+      <div>
+          <form action="##" method="get"> 
+            Title: <input type="text" id="title" name="title">
+              <br> <br>
+            Link: <input type="url" id="link" name="link">
+              <br><br>
+              <div id="upload-btn"><button type="submit" id="Upload">Upload</button></div>
+          </form>
+      </div>
+  </div>
+</div>
+
+<!-- view Result  -->
+<div id="Result">
+  <div class="Res_popup">
+      <button onclick="closeviewResultPopup()" id="close-respopup">&times;</button>
+      <div><h2>View Result</h2 ></div>
+      <hr color="black" height="2px">
+      <div>
+          <form action="##" method="get"> 
+              Select Course: <select name="course" id="course">
+                  <option value="BCA">Select</option>
+                  <option value="BCA">BCA</option>
+                  <option value="BBA">BBA</option>
+                  <option value="MBA">MBA</option>
+              </select>
+              <br> <br>
+              Select Batch: <select name="batch" id="batch">
+                  <option value="year">Select</option>
+                  <option value="year">2021</option>
+                  <option value="year">2022</option>
+                  <option value="year">2023</option>
+                  <option value="year">2024</option>
+              </select>
+              <br><br>
+              <div id="submitbtn"><button type="submit" id="viewbtn">View</button></div>
+          </form>
+      
+      </div>
+  </div>
+</div>
+
+<!-- view profile  -->
+<div id="profilePopup">
+  <div id="profilePopup-content">
+      <div  onclick="closeProfilePopup()" id="closeProfilePopup"><span class="close1">&times;</span></div>
+      <h2>User Details</h2><br>
+      <div>
+      <p><b>Name:</b> Sanchari</p>
+      <p><b>Role:</b> Principal</p>
+      <p><b>Email:</b> abc@mail</p>
+      <p><b>Id:</b>12445</p>
+      <p><b>Address:</b> abcd lane </p>
+      </div>
+  </div>
+</div>
+
+ <!-- course popup  -->
+<div id="CoursePopup">
+  <div id="CoursePopup-content">              
+    <div  onclick="closeCoursePopup()" id="closecoursePopup"><span class="close2">&times;</span></div>
+    <div><h1>Enrolled Courses</h1></div>
+      <div class="Courses-Button1">
+      <button>bca</button>
+      <button>bba</button>
+      <button>mba</button>
+      <button>bca</button>
+      <button>bba</button>
+      <button>mba</button>    
+    </div>                      
+  </div> 
+</div>
+
+<!-- add student -->
+<div id="admission-popup">
+    <div class="admission-request">
+        <button onclick="closeAdmissionPopup()" id="close-addmission">&times;</button>
+        <div><h1>Admission request</h1></div>
+        <hr color="black" height="2px">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Guardian</th>
+                <th>Guardian Email</th>
+                <th>Course</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Deepra Makhal</td>
+                <td>d@gmail.com</td>
+                <td>7980760590</td>
+                <td>Balitikuri Chakpara, Howrah</td>
+                <td>P Makhal</td>
+                <td>p@gmail.com</td>
+                <td>BCA</td>
+                <td><button class="approve-btn">Approve</button></td>
+              </tr>
+              <tr>
+                <td>Deepra Makhal</td>
+                <td>d@gmail.com</td>
+                <td>7980760590</td>
+                <td>Balitikuri Chakpara, Howrah</td>
+                <td>P Makhal</td>
+                <td>p@gmail.com</td>
+                <td>BCA</td>
+                <td><button class="approve-btn">Approve</button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<script src="Dashboard.js"></script>
+
+<footer>
+    <div id="foot"><p>&copy; 2024 ABC College. All rights reserved.</p></div>
+</footer>
+
+</body>
+</html>

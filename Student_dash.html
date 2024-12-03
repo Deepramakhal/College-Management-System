@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="Student_dash.css">
+   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://img.freepik.com/premium-photo/university-college-graduate-campus-logo-design-inspiration-template-design-emblem-school_1029473-590941.jpg?w=996" alt="College Logo" id="College-Logo">
+        </div>
+        <h1><b>ABC College</b></h1>
+        <div id= "Log-div"> 
+            <button class="logout-button">Logout</button>
+        </div>
+</header>
+ <main>
+    <div class="sidebar">  
+        <div class="profile">       
+            <img src="https://www.joonsquare.com/usermanage/image/business/techno-india-university-kolkata-16224/techno-india-university-kolkata-logo.jpg" alt="#" class="img">
+            <p>Ayon </p> 
+            <p>Student</p>
+            <p>Email: abc@mail</p>
+            <button class="btn btn--primary">Edit</button> 
+        </div>
+    </div>
+    <div class="main-content">
+        <h2><U>Operations</U></h2>
+        <div class="courses">
+            <div class="Courses-Button">
+                <button>Enrollment Form</button>
+                <button onclick="openinternalmarks()" >Internal Marks</button>
+                <button>View Resourse</button>
+                <button>Exam Form</button>      
+                <button>Admit Card</button>
+                <button onclick="openFinalResultPopup()">Result</button>    
+                <button>View/Upload Assignment</button>
+                <button onclick="openProfilePopup()" id="profileButton">Student Basic Details</button>
+                <button onclick="openContactHod()">contact HOD/Principal</button>
+            <button><a href="https://www.antiragging.in/affidavit_registration_disclaimer.html" target="_blank">Anti Ragging</a></button>
+            </div>
+        </div>
+    </div>
+</main>
+ 
+<!-- Internal Marks -->
+<div id="Internal">
+    <div class="internal-popup">
+        <button onclick="closeinternalmarks()" id="close-internalmarks">&times;</button>
+        <div><h1>Internal Marks</h1></div>
+        <hr color="black" height="2px">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>CA1</th>
+                <th>CA2</th>
+                <th>CA3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BCAC101</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>BCAC102</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>BCAC103</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+
+  <!-- result  -->
+
+  <div id="FinalResult">
+    <div class="FinalResult-popup">
+        <button onclick="closeFinalResultPopup()" id="close-finalresult">&times;</button>
+        <div><h1>Result</h1></div>
+        <hr color="black" height="2px">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>SL NO.</th>
+                <th>Semester</th>
+                <th>Publication Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>sem1</td>
+                <td>11/11/2022</td>
+                <td><button type="submit" class="viewbtn-std">View</button></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>sem2</td>
+                <td>11/06/2023</td>
+                <td><button type="submit" class="viewbtn-std">View</button></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>sem3</td>
+                <td>11/11/2023</td>
+                <td><button type="submit" class="viewbtn-std">View</button></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>sem4</td>
+                <td>11/01/2024</td>
+                <td><button type="submit" class="viewbtn-std">View</button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+
+  <!-- basic details -->
+  <div id="profilePopup">
+    <div id="profilePopup-content">
+        <div  onclick="closeProfilePopup()" id="closeProfilePopup"><span class="close1">&times;</span></div>
+        <h2>User Details</h2><br>
+        <div>
+        <p><b>Name:</b> Sanchari</p>
+        <p><b>Role:</b> Principal</p>
+        <p><b>Email:</b> abc@mail</p>
+        <p><b>Id:</b>12445</p>
+        <p><b>Address:</b> abcd lane </p>
+        </div>
+    </div>
+  </div>
+
+<!-- contact hod  -->
+<div id="contact-hod">
+    <div id="contact-hod-content">
+         <div onclick="closeContactHod()" id="closecontacthod" class="close2">&times;</div>
+        <h2>Contact HOD</h2>
+        <div>
+            <form action="##" method="post"> 
+                <input type="text" id="name" name="name" placeholder="Name *" required><br>
+                <input type="number" id="roll" name="roll" placeholder="Roll Number *"  minlength="8" maxlength="8"><br>
+                <input type="email" id="email" name="email" placeholder="Email *"><br>
+                <textarea id="message" name="message" placeholder="Message"></textarea><br>
+                <button type="submit" id="viewbtn">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="Dashboard.js"></script>
+
+<footer>
+    <div id="foot"><p>&copy; 2024 ABC College. All rights reserved.</p></div>
+</footer>
+
+</body>
+</html>
