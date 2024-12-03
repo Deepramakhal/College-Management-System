@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="Faculty_dash.css">
+    <script src="Dashboard.js" defer></script>  
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://img.freepik.com/premium-photo/university-college-graduate-campus-logo-design-inspiration-template-design-emblem-school_1029473-590941.jpg?w=996" alt="College Logo" id="College-Logo">
+        </div>
+        <h1><b>ABC College</b></h1>
+
+        <div id= "Log-div"> 
+            <button class="logout-button">Logout</button>
+        </div>
+</header>
+ <main>
+   <div class="sidebar">  
+            <div class="profile">       
+                <img src="https://www.joonsquare.com/usermanage/image/business/techno-india-university-kolkata-16224/techno-india-university-kolkata-logo.jpg" alt="#" class="img">
+                <p>Debesh </p> 
+                <p>Faculty BCA Department</p>
+                <p>Id:12445</p>
+                <p>Email: abc@mail</p>
+                <button class="btn btn--primary">Edit</button> 
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h2><U>Operations</U></h2>
+        <div class="courses">
+            <div class="Courses-Button">
+                <button onclick="openCoursePopup()" class="popupBtn">View Batch</button>  
+                <button onclick="openAssignmentPopup()">Upload Assignment</button> 
+                <button onclick="openMarksPopup()">Upload Marks</button>
+                <button onclick="openResourcesPopup()">Upload Resources</button>           
+                <button onclick="openCheckAssignmentPopup()">Check Assignment</button>
+                <button onclick="openProfilePopup()" id="profileButton">View Profile</button>    
+            </div>
+        </div>
+    </div>
+ </main>
+
+ <!-- batch popup -->
+ <div id="CoursePopup">
+    <div id="CoursePopup-content">              
+      <div onclick="closeCoursePopup()" id="closecoursePopup"><span class="close2">&times;</span></div>
+      <div><h1>Enrolled Courses</h1></div>
+        <div class="Courses-Button1">
+            <button>2021-25</button>
+            <button>2022-26</button>
+            <button>2023-27</button>
+            <button>2024-28</button>    
+      </div>                      
+    </div> 
+</div>
+
+<!-- upload Assignment -->
+<div id="Assignment">
+    <div class="Assignment-Content">
+        <button onclick="closeAssignmentPopup()" id="close-asspopup">&times;</button>
+        <div><h1>Assignment</h1></div>
+        <hr color="black" height="2px">
+        <table class="table">
+            
+            <tbody>
+                <tr>
+                <td>TOPIC </td>
+                <td><input type="text"></td>
+                
+            </tr>
+              <tr>
+                  <td>Papercode </td>
+                  <td><input type="text"></td>
+                  
+              </tr>
+              <tr>
+                  <td>Deadline </td>
+                <td><input type="date"></td>
+              </tr>
+              <tr>
+                <td>Metirial </td>
+                <td><input type="file"></td>
+              </tr>
+              
+            </tbody>
+            
+        </table>
+        <br>
+        <td><button class="Ass-btn">Upload</button>
+        </div>
+    </div>
+
+    <!-- upload Marks -->
+    <div id="Marks">
+        <div class="Marks-Content">
+            <button onclick="closeMarksPopup()" id="close-Markspopup">&times;</button>
+            <div><h1>Upload Marks</h1></div>
+            <hr color="black" height="2px">
+            <table class="table">
+                
+                <tbody>
+                    <tr>
+                    <td>Marks Type </td>
+                    <td>
+                        <select name="mar" id="point" required>
+                        <option value="MARKS">Select</option>
+                        <option value="MARKS">CA1</option>
+                        <option value="MARKS">CA2</option>
+                        <option value="MARKS">CA3</option>
+                        <option value="MARKS">Final Marks</option>
+                    </select>
+                    </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Batch </td>
+                  <td><select name="batch" id="batch">
+                    <option value="year">select</option>
+                    <option value="year">2021-25</option>
+                    <option value="year">2022-26</option>
+                    <option value="year">2023-27</option>
+                    <option value="year">2024-28</option>
+                  </select></td>
+                </tr>
+                <tr>
+                      <td>Papercode </td>
+                      <td>
+                        <select name="PCODE" id="CODE" required>
+                            <option value="pc">Select</option>
+                            <option value="pc">BCAC123</option>
+                            <option value="pc">BCAC456</option>
+                            <option value="pc">BCAC123</option>
+                            <option value="pc">BCAD2133</option> 
+                            <option value="pc">BCAD123</option>   
+                        </select>
+                        </td>      
+                </tr>
+                </tbody>               
+            </table>
+            <br>
+            <td><button class="Ass-btn">Next</button>
+            </div>
+        </div>
+
+<!-- upload Resources -->
+<div id="Resources">
+    <div class="Resources-Content">
+        <button onclick="closeResourcesPopup()" id="close-resourcespopup">&times;</button>
+        <div><h1>Upload Resources</h1></div>
+        <hr color="black" height="2px">
+        <table class="table">
+            
+            <tbody>
+                <tr>
+                <td>Title </td>
+                <td><input type="text"></td>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Batch </td>
+              <td><select name="batch" id="batch">
+                <option value="year">select</option>
+                <option value="year">2021-25</option>
+                <option value="year">2022-26</option>
+                <option value="year">2023-27</option>
+                <option value="year">2024-28</option>
+              </select></td>
+            </tr>
+            <tr>
+                  <td>Papercode </td>
+                  <td>
+                    <select name="PCODE" id="CODE" required>
+                        <option value="pc">Select</option>
+                        <option value="pc">BCAC123</option>
+                        <option value="pc">BCAC456</option>
+                        <option value="pc">BCAC123</option>
+                        <option value="pc">BCAD2133</option> 
+                        <option value="pc">BCAD123</option>   
+                    </select>
+                    </td>      
+            </tr>
+            <tr>
+                <td>Metirial </td>
+                <td><input type="file"></td>
+              </tr>
+            </tbody>               
+        </table>
+        <br>
+        <td><button class="Ass-btn">Upload</button>
+        </div>
+    </div>
+
+    <!-- check assignment -->
+    <div id="CheckAss">
+        <div class="CheckAss-Content">
+            <button onclick="closeCheckAssignmentPopup()" id="close-CheckAsspopup">&times;</button>
+            <div><h2>Check Assignment</h2 ></div>
+            <hr color="black" height="2px">
+            <div>
+                <form action="##" method="get"> 
+                    Select Batch: <select name="batch" id="batch">
+                        <option value="year">Select</option>
+                        <option value="year">2021</option>
+                        <option value="year">2022</option>
+                        <option value="year">2023</option>
+                        <option value="year">2024</option>
+                    </select>
+                    <br> <br>
+                 
+                    Select Papercode:  <select name="PCODE" id="CODE" required>
+                        <option value="pc">Select</option>
+                        <option value="pc">BCAC123</option>
+                        <option value="pc">BCAC456</option>
+                        <option value="pc">BCAC123</option>
+                        <option value="pc">BCAD2133</option> 
+                        <option value="pc">BCAD123</option>   
+                    </select>
+                    <br> <br>
+                    
+                    <div id="submitbtn"><button type="submit" id="viewbtn">Check</button></div>
+                </form>
+            
+            </div>
+        </div>
+      </div>
+
+<!-- view profile  -->  
+<div id="profilePopup">
+    <div id="profilePopup-content">
+        <div  onclick="closeProfilePopup()" id="closeProfilePopup"><span class="close1">&times;</span></div>
+        <h2>User Details</h2><br>
+           <div>
+               <p><b>Name:</b> Debesh</p>
+               <p><b>Role:</b> Faculty </p>
+               <p><b>Department:</b> BCA</p>
+               <p><b>Email:</b> abc@mail</p>
+               <p><b>Id:</b>12435</p>
+               <p><b>Address:</b> abcdef lane </p>
+           </div>
+       </div>
+    </div>
+
+<footer>
+    <div id="foot"><p>&copy; 2024 ABC College. All rights reserved.</p></div>
+  </footer>
+</body>
+</html>
