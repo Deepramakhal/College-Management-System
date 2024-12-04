@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img src="abc.png" alt="Logo" class="logo">
+            <div class="header-center">
+                <h1 class="college-name">College Name</h1>
+                <p class="welcome-text">Welcome, Student</p>
+            </div>
+            <div class="header-button">
+                <button class="logout-btn">Logout</button>
+                <button class="dashboard-btn">Dashboard</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <button class="enroll-pop" onclick="openConfirmation1()">Enroll</button><br><br><br><br><br>
+        <button class="exam-pop" onclick="openConfirmation2()">Exam Form</button>
+    </main>
+    <div class="enrollment">
+        <div class="enrollment-popup">
+            <div class="popup-header">
+                <table class="student-details">
+                    <tr>
+                        <td>Student Name </td>
+                        <td>Ayon Hazra</td>
+                    </tr>
+                    <tr>
+                        <td>Roll no </td>
+                        <td>123456</td>
+                    </tr>
+                    <tr>
+                        <td>Course Name </td>
+                        <td>Computer Science</td>
+                    </tr>
+                </table>
+                <span class="close" onclick="closeConfirmation1()">×</span>
+            </div>
+            <p>You're going to be enrolled in semester - (prev sem + 1)</p>
+            
+            <div class="subject">
+                <p>Subjects to be enrolled</p>
+                <table class="subject-details">
+                    <tr>
+                        <td>Subject1 Code</td>
+                        <td>Subject1 Name</td>
+                    </tr>
+                    <tr>
+                        <td>Subject2 Code</td>
+                        <td>Subject2 Name</td>
+                    </tr>
+                    <tr>
+                        <td>Subject3 Code</td>
+                        <td>Subject3 Name</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="submit">
+                <input type="checkbox" name="enroll" id="enroll">I connfirm the above details
+                <button class="enroll-btn">Enroll</button>
+            </div>
+        </div>
+    </div>
+    <div class="examform">
+        <div class="examform-popup">
+            <div class="popup-header">
+                <table class="student-details">
+                    <tr>
+                        <td>Student Name </td>
+                        <td>Ayon Hazra</td>
+                    </tr>
+                    <tr>
+                        <td>Roll no </td>
+                        <td>123456</td>
+                    </tr>
+                    <tr>
+                        <td>Course Name </td>
+                        <td>Computer Science</td>
+                    </tr>
+                </table>
+                <span class="close" onclick="closeConfirmation2()">×</span>
+            </div>
+            <div class="subject">
+                <p>Subjects</p>
+                <table class="subject-details">
+                    <tr>
+                        <td>Subject1 Code</td>
+                        <td>Subject1 Name</td>
+                    </tr>
+                    <tr>
+                        <td>Subject2 Code</td>
+                        <td>Subject2 Name</td>
+                    </tr>
+                    <tr>
+                        <td>Subject3 Code</td>
+                        <td>Subject3 Name</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="submit">
+                <input type="checkbox" name="exam" id="exam">I connfirm the above details
+                <button class="submit-btn">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

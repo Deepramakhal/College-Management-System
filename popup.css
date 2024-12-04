@@ -1,0 +1,150 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #9f39e3;
+    color: #ffffff;
+    padding: 10px;
+    height: 15vh;
+}
+
+.header-center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+}
+
+.header-button {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+    width: 20%;
+    padding-right: 1%;
+}
+
+.logout-btn , .dashboard-btn {
+    background-color: #ffffff;
+    color: #0000ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 5px;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.logout-btn:hover , .dashboard-btn:hover {  
+    background-color: #0000ff;
+    color: #ffffff;
+}
+
+/* Popup Styling */
+.enrollment , .examform {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.enrollment-popup , .examform-popup {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    height: 60vh;
+    width: 50vw;
+    gap: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.popup-header { 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 2px solid #000000;
+    & .student-details{
+        width: 80%;
+    }
+
+    & .close {
+        cursor: pointer;
+    }
+}
+
+
+.subject {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 25%;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: bold;
+    & .subject-details {
+        width: 70%;
+    }
+
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.enroll-btn , .submit-btn {
+    background-color: #a29a9a;
+    color: #0000ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: auto;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.enroll-btn:hover , .submit-btn:hover {
+    background-color: #0000ff;
+    color: #a29a9a;
+}
