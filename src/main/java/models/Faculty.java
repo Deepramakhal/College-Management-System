@@ -1,18 +1,19 @@
+
 package models;
 
 public class Faculty {
 
-    private int id;
+    private String id;
     private String name;
     private String email;
     private String phone;
     private String courseId;
     private String password;
-    private String profileImage;  // Assuming profileImage is a path or URL to the image file.
-
+    private String profileImage;  
+    private String address;
     // Constructor with all fields
-    public Faculty(int id, String name, String email, String phone, String courseId, 
-                     String password, String profileImage) {
+    public Faculty(String id, String name, String email, String phone, String courseId, 
+                     String password, String profileImage, String address) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -20,17 +21,18 @@ public class Faculty {
         this.courseId = courseId;
         this.password = password;
         this.profileImage = profileImage;
+		this.address = address;
     }
 
 	// Default constructor
 	public Faculty() {}
     
     // Getters and Setters
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -81,4 +83,12 @@ public class Faculty {
     public void setProfileImage(String profileImage) {
         this.profileImage = profileImage;
     }
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
 }
