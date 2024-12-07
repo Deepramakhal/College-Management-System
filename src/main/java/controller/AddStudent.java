@@ -3,6 +3,9 @@ package controller;
 import util.EmailUtil;
 import util.RandomStringGenerator;
 import java.time.LocalDate;
+
+import org.mindrot.jbcrypt.BCrypt;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -50,7 +53,7 @@ public class AddStudent extends HttpServlet {
 			ps.setString(7, dob);
 			ps.setString(8, batch_id);
 			ps.setInt(9, current_sem);
-			ps.setString(10, password);
+			ps.setString(10, BCrypt.hashpw(password, BCrypt.gensalt(10)));
 			ps.setString(11, profileImage);
 			ps.setString(12, address);
 			int rs = ps.executeUpdate();
