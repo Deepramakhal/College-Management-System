@@ -17,7 +17,7 @@ public class AddNotice extends HttpServlet {
 		
 		try(Connection con=dbConnection.getConnection())
 		{
-			String sql="insert into notice values(?,?)";
+			String sql="insert into notice(title,content) values(?,?)";
 			java.sql.PreparedStatement ps=con.prepareStatement(sql);
 			ps.setString(1, title);
 			ps.setString(2, link);
