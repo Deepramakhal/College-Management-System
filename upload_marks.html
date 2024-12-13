@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Marks</title>
+    <link rel="stylesheet" href="upload_marks.css">
+</head>
+<body>
+    <form action="">
+        <header>
+            <div class="header">
+                <div class="header-center">
+                    <h1 class="course-name">Bacherlor of Computer Application</h1>
+                    <p class="batch-name">2022-25</p>
+                </div>
+                <div class="header-button">
+                    <button class="logout-btn">Logout</button>
+                    <button class="dashboard-btn">Dashboard</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="head">
+                    <h1>Upload Marks</h1>
+                    <div class="subhead">
+                        <span class="info">Subject Code <input type="text" name="subject-code" id="subject-code"><br></span>
+                        <span class="info">Semester  <input type="text" name="semester" id="semester"><br></span>
+                        <span class="info">
+                            Exam  <select name="exam" id="exam">
+                                <option value="" disabled selected>Select the exam type</option>
+                                <option value="Internal 1">Internal 1</option>
+                                <option value="Internal 2">Internal 2</option>
+                                <option value="Internal 3">Internal 3</option>
+                                <option value="Final">Final</option>
+                            </select>
+                        </span> 
+                    </div>
+                </div>
+                <div class="student-list">
+                    <div class="table-header">
+                        <span class="cell first">ID</span>
+                        <span class="cell">Name</span>
+                        <span class="cell">Marks</span>
+                    </div>
+                    <div class="table-content">
+                        <span class="cell">1</span>
+                        <span class="cell">John Doe</span>
+                        <span class="cell"><input type="text" name="" id="marks"></span>
+                    </div>
+                    <div class="table-content">
+                        <span class="cell">2</span>
+                        <span class="cell">Jane Doe</span>
+                        <span class="cell"><input type="text" name="" id="marks"></span>
+                    </div>
+                    <div class="table-content">
+                        <span class="cell">3</span>
+                        <span class="cell">John Doe</span>
+                        <span class="cell"><input type="text" name="" id="marks"></span>
+                    </div>
+                    <div class="table-content">
+                        <span class="cell">4</span>
+                        <span class="cell">Jane Doe</span>
+                        <span class="cell"><input type="text" name="" id="marks"></span>
+                    </div>
+                    <button class="upload-btn">Upload</button>
+                </div>
+            </div>
+        </main>
+    </form>
+</body>
+</html>
