@@ -38,10 +38,6 @@ body {
     }
 }
 
-main {
-    border : 2px solid #000000;
-}
-
 .admit-form {
     display: flex;
     flex-direction: column;
@@ -58,8 +54,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+    margin: 10px;
     height: 80vh;
-    width: 100%;
+    width: 90%;
     margin-top: 20px;
 }
 
@@ -98,7 +96,7 @@ main {
 
 .admit-header {
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
     width: 100%;
     align-items: center;
     height: 20vh;
@@ -109,7 +107,7 @@ main {
 
 .subject-details {
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
     width: 100%;
     align-items: center;
     height: 20vh;
