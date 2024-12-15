@@ -13,16 +13,28 @@ body {
 }
 
 /* Header Styling */
+
+.headercontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #000000;
     padding: 10px;
-    height: 20vh;
+    height: 15vh;
+    width: 50%;
     & img {
         height: 100px;
         width: 100px;
         margin-left: 20px;
+        border-radius: 50%;
     }
 }
 
@@ -38,12 +50,21 @@ body {
     }
 }
 
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .admit-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 80vh;
-    width: 100%;
+    width: 80%;
     & h2 {
         font-size: 30px;
         font-weight: bold;
@@ -57,7 +78,7 @@ body {
     padding: 10px;
     margin: 10px;
     height: 80vh;
-    width: 90%;
+    width: 50%;
     margin-top: 20px;
 }
 
@@ -89,9 +110,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: auto;
-    height: 40vh;
-    width: 100%;
+    margin-top: 10px;
+    height: 30vh;
+    width: 110%;
+}
+
+.subject-code , .subject-marks {
+    width: 70%;
+}
+
+.subject-name {
+    width: 130%;
 }
 
 .admit-header {
@@ -99,7 +128,7 @@ body {
     grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
     width: 100%;
     align-items: center;
-    height: 20vh;
+    height: 15vh;
     justify-items: center;
     font-weight: bold;
     font-size: larger;
@@ -110,7 +139,7 @@ body {
     grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
     width: 100%;
     align-items: center;
-    height: 20vh;
+    height: 15vh;
     justify-items: center;
     font-size: large;
 }
@@ -120,7 +149,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 100%;
+  
     border: solid 2px #000000;
 }
 
@@ -132,10 +161,38 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
+}
+
+.signature {
+    & img {
+        height: 100px;
+        width: 100px;
+    }
+}
 
 @media print {
+    .header {
+        width: 100%;
+    }
     .print-btn{
         display: none;
+    }
+    .subject-info , .admit-card{
+        margin-top: 0px;
+    }
+   
+    .admit-card{
+        width: 100vw;
+        height: 75vh;
+    }
+    .subject-info{
+        height: 30vh;
+        width: 110vw;
+    }
+    .subject-code, .subject-marks{
+        width: 60%;
+    }
+    .subject-name{
+        width: 140%;
     }
 } 

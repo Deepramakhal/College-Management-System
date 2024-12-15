@@ -3,56 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admit Cards</title>
+    <title>admit</title>
     <link rel="stylesheet" href="admit.css">
 </head>
 <body>
-    <header class="header">
-        <img src="https://fastly.picsum.photos/id/1018/300/300.jpg?hmac=oow_MB1E5HkJBhAjFwK1u_V8jN_fv8ocb6riDpxYF7Y" alt="Logo" class="logo">
-        <div class="header-center">
-            <h1 class="college-name">College Name</h1>
+    <header class="headercontainer">
+        <div class="header">
+            <img src="https://fastly.picsum.photos/id/1018/300/300.jpg?hmac=oow_MB1E5HkJBhAjFwK1u_V8jN_fv8ocb6riDpxYF7Y" alt="Logo" class="logo">
+            <div class="header-center">
+                <h1 class="college-name">College Name</h1>
+            </div>
         </div>
     </header>
-    <main class="admit-form">
-        <h2>Admit Details</h2>
-        <div class="admit-card">
-            <div class="admit-info">  
-                <div class="admit-head">
-                    <span class="head-info">Name</span>
-                    <span class="head-info">id</span>
-                    <span class="head-info">Course</span>
-                    <span class="head-info">semester</span>
+    <main class="maincontainer">
+        <div class="admit-form">
+            <h2>admit</h2>
+            <div class="admit-card">
+                <div class="admit-info">  
+                    <div class="admit-head">
+                        <span class="head-info">Name</span>
+                        <span class="head-info">id</span>
+                        <span class="head-info">Course</span>
+                        <span class="head-info">semester</span>
+                    </div>
+                    <div class="admit-details">
+                        <span class="">John Doe</span>
+                        <span class="">12345</span>
+                        <span class="">Computer Science</span>
+                        <span class="">1</span>
+                    </div>
+                    <img src="https://fastly.picsum.photos/id/1018/300/300.jpg?hmac=oow_MB1E5HkJBhAjFwK1u_V8jN_fv8ocb6riDpxYF7Y" alt="image" class="image">
                 </div>
-                <div class="admit-details">
-                    <span class="">John Doe</span>
-                    <span class="">12345</span>
-                    <span class="">Computer Science</span>
-                    <span class="">1</span>
+                <div class="subject-info">
+                    <div class="admit-header">
+                        <span class="cell subject-code">Subject Code</span>
+                        <span class="cell subject-name">Subject Name</span>
+                        <span class="cell subject-marks">Marks</span>
+                    </div>
+                    <div class="subject-details">
+                        <span class="cell subject-code">CS101</span>
+                        <span class="cell subject-name">Introduction to Computer Science</span>
+                        <span class="cell subject-marks"></span>
+                    </div>
+                    <div class="subject-details">
+                        <span class="cell subject-code">CS102</span>
+                        <span class="cell subject-name">Data Structures and Algorithms</span>
+                        <span class="cell subject-marks"></span>
+                    </div>
                 </div>
-                <img src="https://fastly.picsum.photos/id/1018/300/300.jpg?hmac=oow_MB1E5HkJBhAjFwK1u_V8jN_fv8ocb6riDpxYF7Y" alt="image" class="image">
-            </div>
-            <div class="subject-info">
-                <div class="admit-header">
-                    <span class="cell subject-code">Subject Code</span>
-                    <span class="cell subject-name">Subject Name</span>
-                    <span class="cell subject-date">Date</span>
-                    <span class="cell invigilator">Invigilator</span>
+                <div class="admit-actions">
+                    <button class="print-btn" onclick="window.print()">Print</button>
                 </div>
-                <div class="subject-details">
-                    <span class="cell subject-code">CS101</span>
-                    <span class="cell subject-name">Introduction to Computer Science</span>
-                    <span class="cell subject-date">2022-01-01</span>
-                    <span class="cell invigilator"></span>
-                </div>
-                <div class="subject-details">
-                    <span class="cell subject-code">CS102</span>
-                    <span class="cell subject-name">Data Structures and Algorithms</span>
-                    <span class="cell subject-date">2022-01-01</span>
-                    <span class="cell invigilator"></span>
-                </div>
-            </div>
-            <div class="admit-actions">
-                <button class="print-btn" onclick="window.print()">Print</button>
             </div>
         </div>
     </main>

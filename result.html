@@ -7,59 +7,63 @@
     <link rel="stylesheet" href="result.css">
 </head>
 <body>
-    <header class="header">
-        <img src="https://fastly.picsum.photos/id/1018/300/300.jpg?hmac=oow_MB1E5HkJBhAjFwK1u_V8jN_fv8ocb6riDpxYF7Y" alt="Logo" class="logo">
-        <div class="header-center">
-            <h1 class="college-name">College Name</h1>
+    <header class="headercontainer">
+        <div class="header">
+            <img src="https://fastly.picsum.photos/id/1018/300/300.jpg?hmac=oow_MB1E5HkJBhAjFwK1u_V8jN_fv8ocb6riDpxYF7Y" alt="Logo" class="logo">
+            <div class="header-center">
+                <h1 class="college-name">College Name</h1>
+            </div>
         </div>
     </header>
-    <main class="result-form">
-        <h2>Result</h2>
-        <div class="result-card">
-            <div class="result-info">  
-                <div class="result-head">
-                    <span class="head-info">Name</span>
-                    <span class="head-info">id</span>
-                    <span class="head-info">Course</span>
-                    <span class="head-info">semester</span>
+    <main class="maincontainer">
+        <div class="result-form">
+            <h2>Result</h2>
+            <div class="result-card">
+                <div class="result-info">  
+                    <div class="result-head">
+                        <span class="head-info">Name</span>
+                        <span class="head-info">id</span>
+                        <span class="head-info">Course</span>
+                        <span class="head-info">semester</span>
+                    </div>
+                    <div class="result-details">
+                        <span class="">John Doe</span>
+                        <span class="">12345</span>
+                        <span class="">Computer Science</span>
+                        <span class="">1</span>
+                    </div>
+                    <img src="https://fastly.picsum.photos/id/1018/300/300.jpg?hmac=oow_MB1E5HkJBhAjFwK1u_V8jN_fv8ocb6riDpxYF7Y" alt="image" class="image">
                 </div>
-                <div class="result-details">
-                    <span class="">John Doe</span>
-                    <span class="">12345</span>
-                    <span class="">Computer Science</span>
-                    <span class="">1</span>
+                <div class="subject-info">
+                    <div class="result-header">
+                        <span class="cell subject-code">Subject Code</span>
+                        <span class="cell subject-name">Subject Name</span>
+                        <span class="cell subject-marks">Marks</span>
+                    </div>
+                    <div class="subject-details">
+                        <span class="cell subject-code">CS101</span>
+                        <span class="cell subject-name">Introduction to Computer Science</span>
+                        <span class="cell subject-marks"></span>
+                    </div>
+                    <div class="subject-details">
+                        <span class="cell subject-code">CS102</span>
+                        <span class="cell subject-name">Data Structures and Algorithms</span>
+                        <span class="cell subject-marks"></span>
+                    </div>
                 </div>
-                <img src="https://fastly.picsum.photos/id/1018/300/300.jpg?hmac=oow_MB1E5HkJBhAjFwK1u_V8jN_fv8ocb6riDpxYF7Y" alt="image" class="image">
-            </div>
-            <div class="subject-info">
-                <div class="result-header">
-                    <span class="cell subject-code">Subject Code</span>
-                    <span class="cell subject-name">Subject Name</span>
-                    <span class="cell subject-marks">Marks</span>
+                <div class="result-footer">
+                    <div class="total-marks">
+                        <span class="marks">SGPA:</span>
+                        <span class="marks">3.5</span>
+                    </div>
+                    <div class="signature">
+                        <img src="https://fastly.picsum.photos/id/1018/300/300.jpg?hmac=oow_MB1E5HkJBhAjFwK1u_V8jN_fv8ocb6riDpxYF7Y" alt="signature">
+                        <h3>signature of Principal</h3>
+                    </div>
                 </div>
-                <div class="subject-details">
-                    <span class="cell subject-code">CS101</span>
-                    <span class="cell subject-name">Introduction to Computer Science</span>
-                    <span class="cell subject-marks"></span>
+                <div class="result-actions">
+                    <button class="print-btn" onclick="window.print()">Print</button>
                 </div>
-                <div class="subject-details">
-                    <span class="cell subject-code">CS102</span>
-                    <span class="cell subject-name">Data Structures and Algorithms</span>
-                    <span class="cell subject-marks"></span>
-                </div>
-            </div>
-            <div class="result-footer">
-                <div class="total-marks">
-                    <span class="marks">SGPA:</span>
-                    <span class="marks">3.5</span>
-                </div>
-                <div class="signature">
-                    <img src="https://fastly.picsum.photos/id/1018/300/300.jpg?hmac=oow_MB1E5HkJBhAjFwK1u_V8jN_fv8ocb6riDpxYF7Y" alt="signature">
-                    <h3>signature of Principal</h3>
-                </div>
-            </div>
-            <div class="result-actions">
-                <button class="print-btn" onclick="window.print()">Print</button>
             </div>
         </div>
     </main>
