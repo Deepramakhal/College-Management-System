@@ -1,0 +1,54 @@
+
+<!-- batch popup -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry</title>
+    <link rel="stylesheet" href="enquiry.css">
+</head>
+<body>
+    <button id="open-popup">Open Enquiry Form</button>
+    <div class="form-popup" id="form-popup">
+        <div class="form-container">
+            <span class="close-button" id="close-popup">&times;</span>
+            <form action="">
+                <h1>Enquiry Form</h1>
+                <table>
+                    <tr>
+                        <td>Name:<span class="required">*</span></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email:<span class="required">*</span></td>
+                        <td><input type="email" id="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone:<span class="required">*</span></td>
+                        <td><input type="tel" id="phone" name="phone"></td>
+                    </tr>
+                    <tr>
+                        <td>Which department are you interested in?<span class="required">*</span></td>
+                        <td><select id="course" name="course">
+                            <option value="">Select</option>
+                            <option value="BCA">BCA</option>
+                            <option value="BBA">BBA</option>
+                            <option value="BHM">BHM (Hotel Management)</option>
+                            <option value="Btech CSE">Btech CSE</option>
+                            <option value="Btech AIML">Btech AIML</option>
+                            <option value="Bsc Data Science">Bsc Data Science</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Message:<span class="required">*</span></td>
+                        <td><textarea id="message" name="message"></textarea></td>
+                    </tr>
+                </table>
+                <div id="button"><button type="submit">Submit</button></div>
+            </form>
+        </div>
+    </div>
+    <script src="enquiry.js"></script>
+</body>
+</html>
