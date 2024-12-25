@@ -1,44 +1,119 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
+
 header {
-    background-color: #0073e6;
+    background-color: #3a3a3a;
     color: white;
-    padding: 1rem;
     text-align: center;
+    padding: 2rem 0;
 }
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* Event Container */
 .event-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
     padding: 2rem;
 }
+
+/* Event Styles */
 .event {
-    display: flex;
-    background: white;
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
     overflow: hidden;
 }
-.event img {
-    width: 300px;
-    height: 200px;
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
+
+/* Navigation Buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Event Content Styles */
 .event-content {
-    padding: 1rem;
+    padding: 1.5rem;
 }
+
 .event-content h3 {
-    margin: 0;
-    color: #0073e6;
-}
-.event-content p {
-    margin: 0.5rem 0;
-    line-height: 1.5;
-}
-.event-content p strong {
+    font-size: 2rem;
     color: #333;
+    margin-bottom: 1rem;
+}
+
+.event-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.event-content strong {
+    color: #333;
+}
+
+/* Responsive Design for Larger Images */
+@media (max-width: 768px) {
+    .event-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event {
+        width: 100%;
+    }
+
+    .carousel-images img {
+        height: 400px; /* Set a fixed height for the images on smaller screens */
+        object-fit: cover;
+    }
 }
