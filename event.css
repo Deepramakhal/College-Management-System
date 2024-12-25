@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+.event-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+.event {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.event img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+.event-content {
+    padding: 1rem;
+}
+.event-content h3 {
+    margin: 0;
+    color: #0073e6;
+}
+.event-content p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+.event-content p strong {
+    color: #333;
+}
