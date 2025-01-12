@@ -1,0 +1,227 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+
+.headercontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000000;
+    padding: 10px;
+    height: 15vh;
+    width: 50%;
+    & img {
+        height: 100px;
+        width: 100px;
+        margin-left: 20px;
+        border-radius: 50%;
+    }
+}
+.logo{
+	transform: translateX(40px);
+
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+    & h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.result-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 80%;
+    & h2 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    height: 80vh;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.result-info {
+    display: flex;
+    height: 20vh;
+    width: 100%;
+    & img {
+        height: 150px;
+        width: 130px;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+}
+
+.result-head , .result-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+    & .head-info {
+        font-weight: bold;
+        font-size: larger;
+    }
+}
+
+.subject-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    height: 30vh;
+    width: 110%;
+}
+
+.subject-code , .subject-marks {
+    width: 70%;
+}
+
+.subject-name {
+    width: 130%;
+}
+
+.result-header {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    width: 100%;
+    align-items: center;
+    height: 15vh;
+    justify-items: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.subject-details {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    width: 100%;
+    align-items: center;
+    height: 15vh;
+    justify-items: center;
+    font-size: large;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  
+    border: solid 2px #000000;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.result-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20vh;
+    width: 100%;
+    margin-top: 15px;
+    & .total-marks {
+        font-weight: bold;
+        font-size: larger;
+    }
+}
+
+.signature {
+    & img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media print {
+    @page{
+    	size:a4;
+    }
+	.college-name{
+	transform:translateX(-20px);
+	}
+    .header {
+        width: 100%;
+    }
+    .print-btn{
+        display: none;
+    }
+    .result-footer , .subject-info , .result-card{
+        margin-top: 0px;
+    }
+   
+    .result-card{
+        width: 100vw;
+        height: 75vh;
+    }
+    .subject-info{
+        height: 30vh;
+        width: 110vw;
+    }
+    .subject-code, .subject-marks{
+        width: 60%;
+    }
+    .subject-name{
+        width: 140%;
+    }
+    header p{
+    	position:fixed;
+    	right:0;
+    	margin-right:15px;
+    	top:5;
+    }
+} 

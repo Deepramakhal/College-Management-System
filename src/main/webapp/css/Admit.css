@@ -1,0 +1,126 @@
+@charset "UTF-8";
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    width:100vw;
+    height:100vh;
+}
+
+.admit-card {
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #000;
+    padding: 20px;
+    background: #fff;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content:space-between;
+    & div{
+    width:80%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    }
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+    border-radius:50%;
+}
+
+.header h1 {
+    margin: 10px 0 0 0;
+    font-size: 24px;
+}
+
+.student-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.student-details img {
+    width: 100px;
+    height: 120px;
+    border: 1px solid #000;
+    margin-right: 20px;
+}
+
+.student-info {
+    flex: 1;
+}
+
+.student-info p {
+    margin: 5px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.print-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.print-button button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.print-button button:hover {
+    background-color: #0056b3;
+}
+
+@media print {
+    .print-button {
+        display: none;
+    }
+    @page {
+        size: landscape; /* Sets the default orientation to landscape */
+        margin: 1cm;
+    }
+    body{
+    width:100vw;
+        height:100vh;
+    }
+    .admit-card{
+    transform:scale(1.3);
+    }
+}

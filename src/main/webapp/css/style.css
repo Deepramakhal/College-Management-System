@@ -1,0 +1,741 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ html,body{
+    margin: 0;
+    background-color: rgb(244, 244, 244);
+    max-width: 100vw;
+    min-height:fit-content;
+    scroll-behavior: smooth;
+}
+header{
+    height: 20%;
+}
+main{
+    height: 60%;
+    background-color: rgb(234, 229, 229);
+}
+footer{
+    height: 20%;
+}
+/* for head section */
+#top-img{
+    background-color: rgba(210, 198, 198, 0.823);
+    display:flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+#top-img img{
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+    border: black solid 2px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#top-img h1{
+    color: rgb(20, 16, 30);
+    font-size:3rem;
+    transform:translateX(50px);
+            font-family:"Monserrat",serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+#top-img svg{
+    padding-right: 4px;
+}
+
+nav{
+    background-color: rgba(0, 0, 77, 0.952);
+    height: 20%;
+    width: 100%;
+}
+.active::after{
+    content: '';
+    position: absolute;
+    left: 59%;
+    bottom: 0;
+    height: 2px;
+    background-color: white; 
+    width: 0;
+    transition: width 0.5s ease-out, left 0.5s ease-out;
+}
+.active:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.active {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+    margin: 10px;
+    line-height: 20px;
+}
+
+.active a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: larger;
+    & svg{
+        margin-right: 8px;
+    }
+}
+
+.active:hover {
+    cursor: pointer;
+    background-color: rgb(0, 86, 179);
+    border-radius: 3px;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(0, 0, 77);
+    padding: 8px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.sub-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-menu ul li {
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.sub-menu ul li:hover {
+    background-color: rgb(0, 86, 179);
+    border-radius: 3px;
+}
+
+.active:hover .sub-menu {
+    display: block; 
+}
+
+/* for manu section  */
+
+#img{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    color: black;
+    justify-content: center;
+    align-items:center ;
+    font-size: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4) ,rgba(0,0,0,0.4)),url("../upload/campus.jpeg");
+}
+#img h1{
+	font-size: 4.5rem;
+	color: #fff;
+	font-family:"Montserrat",serif;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+#about-college{
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: black solid 5px;
+    box-sizing: content-box;
+}
+#news{
+    width: 50%;
+    height: 280px;
+    cursor: pointer;
+    overflow-y: scroll;
+    padding: 20px;
+    margin-bottom:50px;
+    border-radius:10px;
+    border: 2px solid rgba(0,0,0,0.5);
+    & ul{
+        width: 100%;
+        height: 100%;
+       & li{
+        list-style: none; 
+        border-bottom:1px solid rgba(0,0,0,0.2);
+        padding:5px;
+       }
+    }
+    & h1{
+    text-align:center;
+    }
+}
+#paragraph{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & h1{
+        padding-top: 20px;
+}
+}
+
+#paragraph p{
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    height: 300px;
+    width:70%;
+}
+#sec-1 { 
+    display: flex;
+    height: 300px;
+    padding: 10px;
+    margin: 30px;
+    border:1px solid black;
+}
+#paragraph .btn{
+    background-color:rgba(15, 8, 134, 0.952) ;
+    color: #ffffff;
+    width: fit-content;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 8px;
+}
+@media screen and (max-width:600px) {
+    body{
+        height: auto;
+        width: 100%;
+    }
+    #sec-1{
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        & #paragraph{
+            width: 100%;
+            height: fit-content;
+        }
+        & #news{
+            height: 100%;
+            width: 100%;
+            & ul{
+                height: 100px;
+                overflow-y: scroll;
+                width: 100;
+            }
+        }
+    }
+    #news ul li{
+        text-align: center;
+    }
+
+}
+/* for footer section */
+#sec-2{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px;
+    & .btn{
+        background-color:rgba(15, 8, 134, 0.952) ;
+        color: #ffffff;
+        width: fit-content;
+        padding: 7px;
+        margin: 10px;
+        border-radius: 8px;
+    }
+    & .btn:hover{
+        background-color:rgb(1, 1, 54);
+    }
+}
+#sec-2 img{
+    height: 60px;
+    width: 60px;
+    border: #ffffff solid 2px;
+    border-radius: 30px;
+}
+#sec-2 p{
+    text-align:left;
+    color: #ffffff;
+    font-size: small;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+#sub-sec{
+    display: flex;
+    width: 30%;
+    &  h2{
+        color: #ffffff;
+        margin-left: 20px;
+    }
+}
+#footer-sec{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    height: 100%;
+}    
+#footer1{
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://p4.wallpaperbetter.com/wallpaper/445/589/314/map-continents-world-map-wallpaper-preview.jpg");
+}
+#sec-3{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    color: #ffffff;
+    margin-left: 30px;
+    margin-top: 20px;
+   
+}
+#sec-3 ul{
+    margin-top: 10px;
+}
+#sec-3 ul li{
+    list-style: none;
+    padding-top: 10px;
+}
+#sec-4{
+    color: #ffffff;
+    margin-top: 20px;
+    width: 30%;
+    & svg{
+        margin-right: 8px;
+    }
+}
+#sub-sec-4{
+    padding-top: 20px;
+    & h4{
+        padding-top: 10px;
+    }
+    & p{
+        padding-top: 10px;
+    }
+}
+#footer1 .copy{
+    text-align: center;
+    color: #ffffff;
+}
+.sec-5{
+    /* border: black solid 4px; */
+    padding: 20px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.sec-5 h2{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.about{
+    position: relative;
+}
+.about::after{
+    content: '';
+    position: absolute;
+    left: 59%;
+    bottom: 0;
+    height: 2px;
+    background-color: rgb(17, 16, 16); 
+    width: 0;
+    transition: width 0.5s ease-out, left 0.5s ease-out;
+}
+.about:hover{
+    cursor: pointer;
+    background-color:transparent;
+}
+.about:hover::after{
+    width: 100%;
+    left: 0;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 10px;
+}
+.scroll-container {
+    width: 100%;
+    overflow: hidden; /* Hides the text outside the container */
+    white-space: nowrap; /* Prevents text from wrapping */
+    background: rgb(244, 244, 244);
+    border: 1px solid #ddd;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Text that will scroll */
+  .scroll-text {
+    display: flex;
+    animation: scroll 18s linear infinite; /* Scrolls text */
+  }
+
+  /* Keyframes for the scrolling effect */
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+  #sec-6{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+
+  }
+  .recognition {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    /* max-width: 500px; */
+    width: 45%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .recognition h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  .recognition h2::before {
+    content: '📑';
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  .recognition ul {
+    padding: 0;
+    margin: 0;
+  }
+  .recognition ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  .recognition ul li strong {
+    font-weight: bold;
+  }
+
+  .student-benefits {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    /* max-width: 500px; */
+    width: 45%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .student-benefits h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  .student-benefits h2::before {
+    content: '🏢';
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  .student-benefits ul {
+    padding: 0;
+    margin: 0;
+  }
+  .student-benefits ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  .student-benefits ul li strong {
+    font-weight: bold;
+  }
+  .placement-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .placement-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .placement-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .placement-list {
+    padding: 0;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .placement-list li {
+    margin-bottom: 8px;
+  }
+  
+  .placement-list ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  .Internship-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Internship-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .Internship-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+  }
+  .Internship-list {
+    padding: 0;
+    color: #555;
+    line-height: 1.6;
+  }
+  .Internship-list li {
+    margin-bottom: 8px;
+  }
+  .Internship-list ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  #sec-7{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+  }
+  #sec-8{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+
+  }
+  .laboratories-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .laboratories-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .laboratories-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+  }
+  .laboratories-list {
+    padding: 0;
+    color: #555;
+    line-height: 1.6;
+  }
+  .laboratories-list li {
+    margin-bottom: 8px;
+  }
+  .laboratories-list ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  .D-library-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .D-library-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .D-library-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+  }
+  .D-library-list {
+    padding: 0;
+    color: #555;
+    line-height: 1.6;
+  }
+  .D-library-list li {
+    margin-bottom: 8px;
+  }
+  .D-library-list ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  #sec-9{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+  }
+  .infrastructure-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .infrastructure-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .infrastructure-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+  }
+  .infrastructure-list {
+    padding: 0;
+    color: #555;
+    line-height: 1.6;
+  }
+  .infrastructure-list li {
+    margin-bottom: 8px;
+  }
+  .infrastructure-list ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  .studentChapter-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .studentChapter-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .studentChapter h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+  }
+  .studentChapter-list {
+    padding: 0;
+    color: #555;
+    line-height: 1.6;
+  }
+  .studentChapter li {
+    margin-bottom: 8px;
+  }
+  .studentChapter ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+
+  
+  .carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+  }
+  .carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 25px;
+    padding: 20px;
+    margin: 0 100px 0;
+  }
+  .carousel::-webkit-scrollbar{
+  display:none;
+  }
+
+  .card {
+    min-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  h3 {
+    margin-top: 0;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  .arrow.left {
+    left: 10px;
+  }
+  .arrow.right {
+    right: 10px;
+  }
+  
+  

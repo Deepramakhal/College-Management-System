@@ -1,0 +1,1028 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    & a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    width: 100vw;
+    background-color: rgba(221, 180, 180, 0.486);
+    /* height: 100%; */
+   
+}
+/* header  */
+header {
+    display:flex ;
+    background-color: rgba(221, 180, 180, 0.486);
+    width: 100%;
+    height: 20%;
+    flex-direction: space-around;
+    padding: 20px;
+    align-items: center;
+}
+ header h1{
+            display: flex;
+            text-align: center;
+            width: 90%;
+            flex-direction: space-around;
+            justify-content: center; 
+            transform: translateX(-50px);
+            font-size:3rem;
+            font-family:"Monserrat",serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+         } 
+.logo{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#College-Logo{
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+    border: black solid 2px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.logout-button {
+   background-color: #d32a14f5 ;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    height: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;   
+}
+.logout-button:hover{
+    background-color: #e31616;
+}
+.Log-div .logout-button{
+    align-items: center;
+}
+
+/* main */        
+main{            
+    width:100%;            
+    height: 100%;           
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    background-size: cover;
+    background-repeat:  no-repeat ;
+}
+#maindiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+
+}
+/* Sidebar Styles */
+.sidebar {
+    width: fit-content;
+    background-color: #f5f5f5;
+    padding: 12px;
+    height: fit-content;
+    border-radius: 10px;
+    text-align: center;
+    position: fixed;
+    left: -100%; /* Hidden by default */
+    top: 50%;
+    display:flex;
+    flex-direction: column;
+	
+    transform: translateY(-50%);
+    transition: left 0.4s ease; /* Smooth open/close animation */
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar visible */
+.sidebar.active {
+    left: 0; /* Slide in from left */
+}
+
+.sidebar .profile {
+    border-radius: 10px;
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.profile img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile .name, .profile .type, .profile .email {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 40px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #cacad5;
+    width: auto;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn--primary {
+    background-color: rgb(147, 98, 233);
+    color: #ffffff;
+}
+
+.btn--primary:hover {
+    background-color: #4400ff8d;
+    color: #fff;
+}
+
+/* Close Sidebar Button */
+.toggle-btn {
+    position: absolute;
+    float: right;
+    margin-left:5px;
+    top: 13px;
+    right: 15px;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+	background-color: transparent;
+	margin-left:5px;
+    height:30px;
+    width:30px;
+    border-radius:10px;
+}
+
+.toggle-btn:hover {
+    color: red;
+    border-radius:15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Open Sidebar Button */
+.open-sidebar-btn {
+    position: fixed;
+    top: 25%;
+    transform: translateY(-50%);
+    left: 20px;
+    background-color: #147ef3;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.open-sidebar-btn:hover {
+    background-color: #0a5dbf;
+}
+
+       
+/* main-content */      
+main{
+	background:white;
+	height:77vh;	
+	border-radius:8px 8px 0 0;
+	background:rgba(233, 224, 224, 0.962);
+} 
+.main-content {
+    padding: 20px;
+    padding: none;
+    border-radius: 20px;
+    text-align: center;
+    height: fit-content;
+    width: 80%;
+    margin-top: 40PX;
+}
+.operations{        
+    display: flex;
+    height: 80%;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+.operations button{
+    display: flex;
+    background: rgba(0,0,60,0.952) ;
+    border-radius: 10px;
+    font-size: x-large;
+    color: #fff;
+    font-family: Arial Black;
+    /* font-size: medium; */
+    width: 30%;
+    border: 4px solid black;
+    padding: 20px;
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 20px;        
+}
+.operations button:hover{
+	background:rgb(0, 86, 179);
+}
+.operations-Button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    & form{ width: 30%;
+		cursor: pointer;
+		& button{
+			width: 100%;
+			cursor: pointer;
+		}
+    }
+    & button{
+        width: 30%;
+        cursor: pointer;
+        & a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+    }
+}
+
+/* POPUP
+
+internal MARKS  */
+
+#Internal{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.internal-popup{
+    width: 55%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px ;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.internal-popup #close-internalmarks{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: large;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.internal-popup #close-internalmarks:hover{
+    color: #e31616;
+}
+.table {
+    margin-top: 10px;
+    border: 2px solid #161414;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th, .table td {
+    border: 1px solid #b9aeae;
+    padding: 8px;
+    text-align: center;
+}
+.table th {
+    background: #f2f2f2;
+}
+/* Resources */
+#Resourse{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Resourse_popup{
+    width: 60%;
+    height: fit-content ;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    font-size: larger;
+    padding: 10px 5px 10px 5px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center ;
+}
+.Resourse_popup #close-resourcepopup{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: larger;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+#viewbtn:hover {
+    background: #828582;
+  }
+#submitbtn{
+    cursor: pointer;
+    font-size: medium;
+    display: flex;
+    color: #ffffff;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+#close-resourcepopup:hover{
+    color: #e31616;
+}
+
+
+
+
+
+/* view result  */
+#FinalResult{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.FinalResult-popup{
+    width: 55%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px ;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.FinalResult-popup #close-finalresult{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: large;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.FinalResult-popup #close-finalresult:hover{
+    color: #e31616;
+}
+.table {
+    margin-top: 10px;
+    border: 2px solid #161414;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th, .table td {
+    border: 1px solid #b9aeae;
+    padding: 8px;
+    text-align: center;
+}
+.table th {
+    background: #f2f2f2;
+}
+.viewbtn-std {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.viewbtn-std:hover {
+    background: #45a049;
+}
+/*Resource popup*/
+#Resource-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#Resourcepopup-content {
+  width: fit-content;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px 5px 10px 5px;
+  border-radius: 20px;
+  border: solid black 2px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#close-resource {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(204, 204, 204);
+  border-radius: 90px;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border: none;
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+#close-resource:hover {
+  background-color: rgb(185, 185, 185); /* Slight hover effect */
+}
+
+#view-resource {
+  display: flex;
+  align-content: center;
+  width: fit-content;
+  border: #000 solid 1px;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#view-resource th,
+#view-resource td {
+	width:auto;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#view-resource th {
+  background-color: #f4f4f4;
+}
+
+/* Add hover effect for links inside the table */
+#view-resource td a {
+  text-decoration: none;
+  color: blue;
+}
+
+#view-resource td a:hover {
+  text-decoration: underline;
+}
+
+/* view / upload assignment   */
+#Assignment-popup {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  #Assignment {
+    width: fit-content;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px 5px 10px 5px;
+    border-radius: 20px;
+    border: solid black 2px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  #close-assignment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(204, 204, 204);
+    border-radius: 90px;
+    position:relative;
+    height: 30px;
+    width: 30px;
+    border: none;
+    font-size: 20px;
+    float: right;
+    cursor: pointer;
+  }
+  #view-assignment {
+    display: flex;
+    align-content: center;
+    width: fit-content;
+    border: #000 solid 1px;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  .file-upload {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  input[type="file"] {
+    cursor: pointer;
+  }
+  #view-assignment button {
+    padding: 5px 10px;
+    background-color: rgb(76, 175, 80);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #view-assignment button:hover {
+    background-color: rgb(69, 160, 73);
+  }
+
+/* view profile */
+#profilePopup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+#profilePopup-content {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        width: 50%;
+        max-width: 400px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        position: relative;
+       
+} 
+#profile-table {
+    margin-top: 10px;
+    border: 2px solid #161414;
+    width: 100%;
+    border-collapse: collapse;
+}
+#profile-table th, #profile-table td {
+    border: 1px solid #b9aeae;
+    padding: 8px;
+    text-align: center;
+}
+#profile-table th {
+    background: #f2f2f2;
+}
+#closeProfilePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}  
+#closeProfilePopup:hover {
+    color: #000;
+}
+.close1{
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close1:hover {
+    color: #000;
+}
+p{
+    font-size: larger;
+} 
+/* enrollment  */
+#Enroll{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.Enroll-popup{
+    width: 55%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px ;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    & .table3{
+     box-sizing: border-box;
+
+    }
+}
+.Enroll-popup #close-enrollment{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: large;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.Enroll-popup #close-enrollment:hover{
+    color: #e31616;
+}
+.table3{
+    margin-top: 10px;
+    width: 100%;
+    /* border-collapse: collapse; */
+}
+.table2 {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table3 th, .table3 td, .table2 th, .table2 td {
+    border: 1px solid #99a6a8;
+    padding: 8px;
+    text-align: center;
+}
+.table3 th, .table2 th {
+    background: #d3d3d3;
+}
+.table2 b {
+    font-size: larger;justify-content: center;
+    align-items: center;
+}
+.submitenroll{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.submit-btn {
+    color: #ffffff;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    margin-left: auto;
+    width: 60px;
+    height: 30px;
+    font-weight: bold;
+}
+.submit-btn:hover {
+    background-color: #19e08a;
+    color: #ffffff;
+}
+
+
+/* exam form  */
+
+#examform{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.examform-popup{
+    width: 55%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px ;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    & .table3{
+     box-sizing: border-box;
+
+    }
+}
+.examform-popup #close-examform{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: large;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.examform-popup #close-examform:hover{
+    color: #e31616;
+}
+
+/* footer */
+footer {
+    width: 100vw;
+    height: fit-content;
+    flex-direction: space-around;
+    padding: 20px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    & p {
+    	position:absolute;
+    	right:50%;
+    	transform: translateX(50%);
+    	bottom:0;
+        margin-top: 10px;   
+    }
+}
+/*Password change popup*/
+/* Scoped Overlay styling */
+.custom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display:none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Show overlay when active */
+.custom-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Scoped Popup container styling */
+.custom-popup {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Scoped Form group styling */
+.custom-popup .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.custom-popup .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.custom-popup .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Scoped Form actions (buttons) styling */
+.custom-popup .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.custom-popup .form-actions button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.custom-popup .form-actions button[type="submit"] {
+    background: #007bff;
+    color: #fff;
+}
+
+.custom-popup .form-actions button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.custom-popup .form-actions button[type="button"] {
+    background: #ccc;
+    color: #333;
+}
+
+.custom-popup .form-actions button[type="button"]:hover {
+    background: #aaa;
+}
+
+@media screen and (max-width: 600px) {
+    /* General styles */
+    html, body {
+        font-size: 14px;
+    }
+
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    #College-Logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .logout-button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+    .profile img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .btn {
+        width: 80%;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    /* Main Content */
+    .main-content {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .courses {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .courses button {
+        width: 45%;
+        /* padding: 15px; */
+        /* font-size: 1rem; */
+        font-size: small;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+
+    /* Popups */
+    #profilePopup-content, #CoursePopup-content {
+        width: 80%;
+        padding: 20px;
+    }
+
+    #closeProfilePopup, #closecoursePopup {
+        font-size: medium;
+    }
+}
+#Internal,#FinalResult,#Assignment-popup,#profilePopup,#Enroll,#examform{
+	animation: fadeIn 0.5s ease-in-out; 
+}
+#profilePopup-content, #CoursePopup-content,#Resourcepopup-content,.examform-popup,.internal-popup,.FinalResult-popup,#Assignment,.Enroll-popup,#Resultpopup-content{
+	animation: slideIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

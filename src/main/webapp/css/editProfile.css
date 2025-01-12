@@ -1,0 +1,208 @@
+@charset "UTF-8";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-image {
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* Overlay Styles */
+#overlay {
+    display: none; /* Hidden by default, will be displayed dynamically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Popup Field Styles */
+#otpField {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Form Inputs */
+#otpField input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#otpField input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Submit Button */
+#otpField button {
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#otpField button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    #otpField {
+        padding: 15px 20px;
+    }
+
+    #otpField input[type="text"] {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    #otpField button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+
+/*Change password page css*/
+/* Parent container to center the form */
+#changePasswordContainer {
+    position: fixed; /* Fix the form at the center of the screen */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to true center */
+    display: flex; /* Center contents inside the form */
+    flex-direction: column; /* Align contents in column layout */
+    align-items: center; /* Align inputs and button at the center */
+    background-color: #f9f9f9; /* Light background for the form */
+    border-radius: 8px; /* Smooth corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    padding: 20px; /* Padding for inner content spacing */
+    width: 90%; /* Adjust for responsiveness */
+    max-width: 400px; /* Limit width for larger screens */
+}
+
+/* Style for form inputs */
+#changePasswordContainer input[type="text"] {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Inner padding for text fields */
+    margin-bottom: 15px; /* Spacing between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners for inputs */
+    font-size: 16px; /* Readable font size */
+    box-sizing: border-box; /* Consistent padding and border handling */
+}
+
+/* Style for the submit button */
+#changePasswordContainer button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text for contrast */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Smooth corners */
+    padding: 12px 20px; /* Button size */
+    font-size: 16px; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for button */
+#changePasswordContainer button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    #changePasswordContainer {
+        width: 95%; /* Slightly narrower on small screens */
+    }
+}
+
