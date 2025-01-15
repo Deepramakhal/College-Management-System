@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* General Reset */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #004085; /* Darkish blue */
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid #004085;
+}
+
+/* Header Content Layout */
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-center {
+    flex: 1; /* Take up space for center alignment */
+    text-align: center;
+}
+
+.course-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transform:translateX(80px);
+}
+
+.batch-name {
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Buttons on the Right */
+.header-button {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.dashboard-btn {
+	padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color:#00049b;
+    font-weight:bolder;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.logout-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color:white ;
+    color: #cc0000;
+    font-weight:bolder;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dashboard-btn:hover{
+	 background-color: #00049b;
+	 color:white;
+}
+.logout-button:hover{
+    background-color: #cc0000;
+    color:white;
+}
+
+/* Main Styling */
+main {
+    padding: 40px;
+}
+
+/* Student List Styling */
+.student-list {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-header,
+.table-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.table-header {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ddd;
+    text-align:center;
+}
+
+.table-content {
+    border-bottom: 1px solid #ddd;
+}
+
+.table-content:last-child {
+    border-bottom: none;
+}
+
+.cell {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+}

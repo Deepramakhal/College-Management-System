@@ -1,0 +1,132 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#004085;
+    color: #ecf0f1;
+    padding: 20px 20px;
+}
+.header-center{
+	width:100%;
+}
+.header-center h1 {
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-left:50%;
+}
+
+.header-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-button button {
+   
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.dashboard-btn {
+	padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color:#00049b;
+    font-weight:bolder;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.logout-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color:white ;
+    color: #cc0000;
+    font-weight:bolder;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dashboard-btn:hover{
+	 background-color: #00049b;
+	 color:white;
+}
+.logout-button:hover{
+    background-color: #cc0000;
+    color:white;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Table Container */
+#whole {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Layout for Subjects and Marks */
+#whole .header-row,
+#whole .data-row {
+    display: grid;
+    grid-template-columns: 150px repeat(auto-fit, minmax(100px, 1fr));
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Header Row Styles */
+.header-row {
+    background-color: #004085;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Data Row Styles */
+.data-row {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.data-row:nth-child(even) {
+    background-color: #bdc3c7;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #1abc9c;
+}

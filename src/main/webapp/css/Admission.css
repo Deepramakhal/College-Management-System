@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ html,body{
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    min-height:fit-content;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .form-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  legend {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  label {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  input, select{
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .marks{
+    font-size: 15px;
+  }
+  button {
+    width: 50%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgb(71, 201, 75);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgb(88, 173, 91);
+  }
+  #button{
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+        /* Custom label styling */
+        .custom-file-label {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Add hover effect */
+        .custom-file-label:hover {
+            background-color: #0056b3;
+        }
+
+        /* Display chosen file name */
+        .file-name {
+            margin-left: 10px;
+            font-size: 14px;
+        }
+        .fileTr{
+        display:flex;
+        justify-content: center;
+        }

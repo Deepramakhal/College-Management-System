@@ -1,0 +1,699 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            width: 100vw;
+            background-color: rgba(221, 180, 180, 0.486);
+        }
+        header {
+            display:flex ;
+            background-color: rgba(221, 180, 180, 0.486);
+            width: 100%;
+            height: 20%;
+            flex-direction: space-around;
+            padding: 20px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+       header h1{
+            display: flex;
+            text-align: center;
+            width: 90%;
+            flex-direction: space-around;
+            justify-content: center; 
+            transform: translateX(-50px);
+            font-size:3rem;
+            font-family:"Monserrat",serif;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+         } 
+        .logo{
+            width: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+#College-Logo{
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+    border: black solid 2px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.logout-button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+            padding: 10px 10px;
+            height: fit-content;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;    
+}
+.Log-div .logout-button{
+    align-items: center;
+}
+
+    /* main */
+main{            
+    width:100%;            
+    height: 100%;           
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    background-size: cover;
+    background-repeat:  no-repeat ;
+}
+#maindiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+
+}
+
+/* sidebar */
+.sidebar {
+    width: fit-content;
+    background-color: #f5f5f5;
+    padding: 12px;
+    height: fit-content;
+    border-radius: 10px;
+    text-align: center;
+    position: fixed;
+    left: -100%; /* Hidden by default */
+    top: 50%;
+    display:flex;
+    flex-direction: column;
+	
+    transform: translateY(-50%);
+    transition: left 0.4s ease; /* Smooth open/close animation */
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar visible */
+.sidebar.active {
+    left: 0; /* Slide in from left */
+}
+
+.sidebar .profile {
+    border-radius: 10px;
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.profile img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile .name, .profile .type, .profile .email {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 40px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #cacad5;
+    width: auto;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn--primary {
+    background-color: rgb(0, 0, 255);
+    color: #ffffff;
+}
+
+.btn--primary:hover {
+    background-color: rgb(0, 128, 128);
+    color: #fff;
+}
+
+/* Close Sidebar Button */
+.toggle-btn {
+    position: absolute;
+    float: right;
+    margin-left:5px;
+    top: 13px;
+    right: 15px;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+	background-color: transparent;
+	margin-left:5px;
+    height:30px;
+    width:30px;
+    border-radius:10px;
+}
+
+.toggle-btn:hover {
+    color: red;
+    border-radius:15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Open Sidebar Button */
+.open-sidebar-btn {
+    position: fixed;
+    top: 25%;
+    transform: translateY(-50%);
+    left: 20px;
+    background-color: #147ef3;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.open-sidebar-btn:hover {
+    background-color: #0a5dbf;
+}
+
+/* main-content */  
+.main-content {
+    padding: 20px;
+    /* background-color: #eff3f7; */
+    padding: none;
+    border-radius: 20px;
+    text-align: center;
+    height: fit-content;
+    width: 80%;
+    margin-top: 40PX;
+}
+.courses{        
+    display: flex;
+    height: 80%;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+.courses button{
+     display: flex;
+    background: rgba(0,0,60,0.952) ;
+    border-radius: 10px;
+    font-size: x-large;
+    color: #fff;
+    font-family: Arial Black;
+    /* font-size: medium; */
+    width: 30%;
+    border: 4px solid black;
+    padding: 20px;
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 20px;         
+}
+.courses button:hover{
+background:rgb(0, 86, 179);}
+.Courses-Button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    & form{ width: 30%;
+		cursor: pointer;
+		& button{
+			width: 100%;
+			cursor: pointer;
+		}
+    }
+    & button{
+    border:2px double white;
+    outline: 2px solid black;
+    transition: 0.5s;
+        width: 30%;
+        cursor: pointer;
+        & a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+    }
+}
+
+/* popup */
+/* exam registration  */
+#Reg-Popup{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.Reg-Enrol_popup{
+    width: 55%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px ;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.Reg-Enrol_popup #close-regpopup{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: large;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.Reg-Enrol_popup #close-regpopup:hover{
+    color: #e31616;
+}
+.table {
+    margin-top: 10px;
+    border: 2px solid #161414;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th, .table td {
+    border: 1px solid #b9aeae;
+    padding: 8px;
+    text-align: center;
+}
+.table th {
+    background: #f2f2f2;
+}
+.start-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.start-btn:hover {
+    background: #45a049;
+}
+.stop-btn {
+    background: #e83838;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.stop-btn:hover {
+    background: #ff1616;
+}
+
+/* confirm result  */
+#ResultPopup,#ViewResult{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+#Resultpopup-content{
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    display: table-row-group;
+}
+.Result-Button1, Courses-Button1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+#Resultpopup-content button, .Courses-Button1 button{
+    display: flex;
+    position: relative;
+    background-color: #85eb4af5;
+    border-radius: 10px;
+    font-size: large ;
+    color: #000000;
+    font-family: Arial black;
+    font-size: medium;
+    width: fit-content;
+    border: 2px solid black;
+    padding: 20px;
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 20px;        
+}
+#closeresult {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+
+    & .close4{
+        display: flex;
+        justify-content: center;
+        /* border: 2px solid black; */
+        /* border-radius: 8px; */
+        width: 30px;
+        cursor: pointer;
+        font-size: larger;
+        position: relative;
+    }      
+}  
+.close4{
+    color: #000000;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close4:hover {
+    color: #ba0000;
+}
+
+/* view profile */
+#profilePopup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+#profilePopup-content {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        width: fit-content;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        position: relative;
+       
+} 
+#profile-table {
+    margin-top: 10px;
+    border: 2px solid #161414;
+    width: 100%;
+    border-collapse: collapse;
+}
+#profile-table th, #profile-table td {
+    border: 1px solid #b9aeae;
+    padding: 8px;
+    text-align: center;
+}
+#profile-table th {
+    background: #f2f2f2;
+}
+#closeProfilePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}  
+#closeProfilePopup:hover {
+    color: #000;
+}
+.close1{
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close1:hover {
+    color: #000;
+}
+p{
+    font-size: larger;
+} 
+
+
+
+/* view batch */
+#CoursePopup{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+#CoursePopup-content{
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    width: 50%;
+    /* max-width: 400px; */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    display: table-row-group;
+}
+.Courses-Button1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}/*
+#CoursePopup-content button{
+    display: flex;
+    position: relative;
+    background-color: #9a98f9;
+    border-radius: 10px;
+    font-size: large ;
+    color: #000000;
+    font-family: Arial black;
+    font-size: medium;
+    width: 40%;
+    border: 2px solid black;
+    padding: 20px;
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 20px;        
+}*/
+#closecoursePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+
+    & .close2{
+        display: flex;
+        justify-content: center;
+        /* border: 2px solid black; */
+        /* border-radius: 8px; */
+        width: 30px;
+        cursor: pointer;
+        font-size: larger;
+        position: relative;
+    }      
+}  
+.close2{
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close2:hover {
+    color: #000000;
+}
+
+/* footer */
+footer {
+    width: 100vw;
+    height: fit-content;
+    flex-direction: space-around;
+    padding: 20px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    & p {
+    	position:absolute;
+    	right:50%;
+    	transform: translateX(50%);
+    	bottom:0;
+        margin-top: 10px;   
+    }
+}
+
+/* mobile screen  */
+@media screen and (max-width: 600px) {
+    /* General styles */
+    html, body {
+        font-size: 14px;
+    }
+
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    #College-Logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .logout-button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+    .profile img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .btn {
+        width: 80%;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    /* Main Content */
+    .main-content {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .courses {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .courses button {
+        width: 45%;
+        /* padding: 15px; */
+        /* font-size: 1rem; */
+        font-size: small;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+
+    /* Popups */
+    #profilePopup-content, #CoursePopup-content {
+        width: 80%;
+        padding: 20px;
+    }
+
+    #closeProfilePopup, #closecoursePopup {
+        font-size: medium;
+    }
+}
+#Reg-popup,#ResultPopup,#ViewResult,#profilePopup,#CoursePopup{
+	animation: fadeIn 0.5s ease-in-out; 
+}
+.Reg-Enrol_popup,#profilePopup-content, #CoursePopup-content,#Resultpopup-content{
+	animation: slideIn 0.5s ease-in-out; 
+}
+@keyframes fadeIn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

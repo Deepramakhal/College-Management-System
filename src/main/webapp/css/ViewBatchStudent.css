@@ -1,0 +1,320 @@
+@charset "UTF-8";
+/* General Reset */
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #004080;
+    color: white;
+}
+
+.header-center {
+    text-align: center;
+    width:100%;
+}
+
+.header h1{
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    width:fit-content;
+	margin-left:48%;
+}
+
+.header-center .batch-name {
+    margin: 5px 0 0;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.header-button {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+}
+.dashboard-btn {
+	padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: #00049b;
+    font-weight:bolder;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.logout-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color:white ;
+    color: #ff4d4d;
+    font-weight:bolder;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dashboard-btn:hover{
+	 background-color: rgb(0, 0, 128);
+	 color:white;
+}
+.logout-button:hover{
+    background-color: #cc0000;
+    color:white;
+}
+
+/* Main Content Styles */
+.student-list {
+    margin: 20px auto;
+    width: 90vw;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.student-list .h {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #004080;
+	color: white;
+	padding: 15px;
+	border-bottom:2px white solid;
+}
+
+.student-list .h h2 {
+    margin: 0;
+    padding: 15px;
+    background-color: #004080;
+    color: white;
+    text-align: left;
+    width:20%;
+}
+.student-list .h form{width: 70%;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 4px;
+margin:5px;
+}
+.student-list form input {width:30%;margin-left:auto;margin-right:20px;
+border-radius: 4px;
+border: 1px solid #ccc;
+padding: 10px 8px;
+font-size: 14px;
+}
+
+.student-list form button {
+	
+	background-color: #004080;
+	color: white;
+	border: 1px white solid;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+.student-list form input::placeholder {
+	text-align: center;
+}
+button {
+    background-color: #004085;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+.table-header, .table-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+.table-header {
+    font-weight: bold;
+    text-align: center;
+}
+
+.cell {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+}
+
+.cell.id {
+    flex: 1.5;
+}
+
+.cell.action {
+    flex: 2;
+}
+/* Specific Column Styles */
+.cell.email {
+    flex: 2; /* Slightly wider for emails */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cell.phone {
+    flex: 1;
+    text-align: center;
+}
+
+/* Table Content (Ensure vertical stacking) */
+.table-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure wrapping for smaller screens */
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    flex-direction: row; /* Each row should appear properly */
+    width: 100vw; /* Ensure it takes the full width */
+}
+
+.table-content .cell {
+    flex: 1; /* Distribute space evenly */
+    text-align: center;
+    padding: 5px;
+    word-wrap: break-word; /* Ensure text wraps properly */
+}
+
+/* Ensure one row per student */
+.student-list .table-content {
+    flex-direction: row; /* Row layout for each student's data */
+    display: flex;
+    width: 100%;
+}
+
+/* For profile image cell */
+.table-content .cell img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Header remains horizontal */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #004080;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* No Data Style */
+.no-data {
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+/* Remove Button */
+.remove-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff4d4d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Confirmation Popup Styles */
+#confirmation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.confirmation-popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-popup p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.confirmation-popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #999;
+}
+
+.confirmation-popup .close:hover {
+    color: black;
+}
+
+.confirmation-popup .yes-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.confirmation-popup .yes-btn:hover {
+    background-color: #45a049;
+}
+
+.confirmation-popup .no-btn {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.confirmation-popup .no-btn:hover {
+    background-color: #d32f2f;
+}

@@ -1,0 +1,1232 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    & a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    width: 100vw;
+    background-color: rgba(221, 180, 180, 0.486);
+    /* height: 100%; */
+   
+}
+/* header  */
+header {
+    display:flex ;
+    background-color: rgba(221, 180, 180, 0.486);
+    width: 100%;
+    height: 20%;
+    flex-direction: space-around;
+    padding: 20px;
+    align-items: center;
+}
+ header h1{
+            display: flex;
+            text-align: center;
+            width: 90%;
+            flex-direction: space-around;
+            justify-content: center; 
+            transform: translateX(-50px);
+            font-size:3rem;
+            font-family:"Monserrat",serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+         } 
+
+.logo{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#College-Logo{
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+    border: black solid 2px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.logout-button {
+   background-color: #d32a14f5 ;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    height: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;   
+}
+.logout-button:hover{
+    background-color: #e31616;
+}
+.Log-div .logout-button{
+    align-items: center;
+}
+
+/* main */        
+main{            
+    width:100%;            
+    height: 100%;           
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    background-size: cover;
+    background-repeat:  no-repeat ;
+}
+#maindiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+
+}
+/* Sidebar Styles */
+.sidebar {
+    width: fit-content;
+    background-color: #f5f5f5;
+    padding: 12px;
+    height: fit-content;
+    border-radius: 10px;
+    text-align: center;
+    position: fixed;
+    left: -100%; /* Hidden by default */
+    top: 50%;
+    display:flex;
+    flex-direction: column;
+	
+    transform: translateY(-50%);
+    transition: left 0.4s ease; /* Smooth open/close animation */
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar visible */
+.sidebar.active {
+    left: 0; /* Slide in from left */
+}
+
+.sidebar .profile {
+    border-radius: 10px;
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.profile img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile .name, .profile .type, .profile .email {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 40px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #cacad5;
+    width: auto;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn--primary {
+    background-color: #004085;
+    color: #ffffff;
+}
+
+.btn--primary:hover {
+    background-color: rgb(0, 64, 128);
+    color: #fff;
+}
+
+/* Close Sidebar Button */
+.toggle-btn {
+    position: absolute;
+    float: right;
+    margin-left:5px;
+    top: 13px;
+    right: 15px;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+	background-color: transparent;
+	margin-left:5px;
+    height:30px;
+    width:30px;
+    border-radius:10px;
+}
+
+.toggle-btn:hover {
+    color: red;
+    border-radius:15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Open Sidebar Button */
+.open-sidebar-btn {
+    position: fixed;
+    top: 25%;
+    transform: translateY(-50%);
+    left: 20px;
+    background-color: #147ef3;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.open-sidebar-btn:hover {
+    background-color: #0a5dbf;
+}
+
+       
+/* main-content */      
+main{
+	background:white;
+	height:77vh;	
+	border-radius:8px 8px 0 0;
+	background:rgba(233, 224, 224, 0.962);
+} 
+.main-content {
+    padding: 20px;
+    padding: none;
+    border-radius: 20px;
+    text-align: center;
+    height: fit-content;
+    width: 80%;
+    margin-top: 40PX;
+}
+.operations{        
+    display: flex;
+    height: 80%;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+.operations button{
+    display: flex;
+    background: rgba(0,0,60,0.952) ;
+    border-radius: 10px;
+    font-size: x-large;
+    color: #fff;
+    font-family: Arial Black;
+    /* font-size: medium; */
+    width: 30%;
+    border: 4px solid black;
+    padding: 20px;
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 20px;        
+}
+.operations button:hover{
+	background:rgb(0, 86, 179);
+}
+.operations-Button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    & form{ width: 30%;
+		cursor: pointer;
+		& button{
+			width: 100%;
+			cursor: pointer;
+		}
+    }
+    & button{
+    border:2px double white;
+    outline: 2px solid black;
+    transition: 0.5s;
+        width: 30%;
+        cursor: pointer;
+        & a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+    }
+}
+
+/* popup  */
+/* exam registration popup  */
+#Reg-Popup {
+    position: fixed; /* Keeps popup fixed while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for focus */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures popup is on top */
+    cursor: default;
+}
+
+.Reg-Enrol_popup {
+    width: 50%;
+    max-width: 600px; /* Limits popup width on smaller screens */
+    height: auto; /* Adjusts height based on content */
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px; /* Added consistent padding */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Darker shadow for emphasis */
+    overflow: hidden; /* Ensures content stays inside rounded corners */
+}
+
+.Reg-Enrol_popup h1 {
+    font-size: 24px;
+    color: #333333; /* Darker text for better readability */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.Reg-Enrol_popup hr {
+    width: 90%;
+    border: none;
+    height: 1px;
+    background-color: #cccccc; /* Subtle line separator */
+    margin: 10px auto;
+}
+
+.Reg-Enrol_popup #close-regpopup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px; /* Larger close button */
+    font-weight: bold;
+    color: #333333; /* Neutral color */
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.Reg-Enrol_popup #close-regpopup:hover {
+    color: #e31616; /* Red hover effect for close button */
+}
+
+.table {
+    margin-top: 15px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center; /* Center-align text by default */
+    font-size: 16px; /* Larger font for better readability */
+}
+
+.table th, .table td {
+    border: 1px solid #cccccc; /* Subtle border color */
+    padding: 10px;
+}
+
+.table th {
+    background-color: #f7f7f7; /* Light gray header */
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row colors */
+}
+
+.table tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.start-btn,
+.stop-btn {
+    text-decoration: none; /* Removes underline from links */
+    font-size: 14px; /* Consistent button font size */
+    padding: 7px 12px; /* Slightly larger padding */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.start-btn {
+    background: #4CAF50; /* Green button for "Start" */
+    color: white;
+    cursor: pointer;
+}
+
+.start-btn:hover {
+    background: #45a049; /* Slightly darker green on hover */
+}
+
+.stop-btn {
+    background: #e83838; /* Red button for "Stop" */
+    color: white;
+    cursor: pointer;
+}
+
+.stop-btn:hover {
+    background: #ff1616; /* Brighter red on hover */
+}
+
+/* add HOD  */
+#hod-popup{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.hod-request{
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px 5px 10px 5px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.hod-request #close-hod{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.hod-request #close-hod:hover{
+    color: #e31616;
+}
+.table {
+    margin-top: 10px;
+    border: 2px solid #161414;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th, .table td {
+    border: 1px solid #b9aeae;
+    padding: 8px;
+    text-align: center;
+}
+.table th {
+    background: #f2f2f2;
+}
+.approve-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.approve-btn:hover {
+    background: #45a049;
+}
+
+
+/* add notice  */
+
+#Add-Notice {    
+    position: fixed; /* Ensures the popup stays fixed while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background overlay */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures it stays above other elements */
+    cursor: default; /* Avoids confusion with pointer */
+}
+
+.Add_noticepop {
+    width: 40%;
+    max-width: 500px; /* Ensures popup looks good on smaller screens */
+    height: auto; /* Adjusts height based on content */
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    font-size: larger;
+    padding: 20px; /* Spacing around the content */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+    justify-content: center;
+    align-items: center;
+}
+
+.Add_noticepop h2 {
+    font-size: 24px; /* Larger heading for better readability */
+    color: #333333; /* Slightly darker text color for better contrast */
+    margin-bottom: 10px;
+}
+
+.Add_noticepop hr {
+    width: 80%;
+    border: none;
+    height: 1px;
+    background-color: #cccccc; /* Subtle line separator */
+    margin: 15px 0;
+}
+
+.Add_noticepop form {
+    width: 100%; /* Full width form */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between inputs */
+}
+
+.Add_noticepop form input[type="text"], 
+.Add_noticepop form textarea,
+.Add_noticepop form input[type="file"] {
+    width: 100%; /* Inputs take the full width */
+    padding: 10px; /* Comfortable padding inside inputs */
+    font-size: medium;
+    border: 1px solid #cccccc; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box;
+}
+
+.Add_noticepop form textarea {
+    resize: vertical; /* Allows resizing only vertically */
+    min-height: 80px; /* Ensures sufficient height for the textarea */
+}
+
+.Add_noticepop form input:focus, 
+.Add_noticepop form textarea:focus {
+    outline: none;
+    border: 1px solid #4CAF50; /* Green border for focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Subtle focus shadow */
+}
+
+.Add_noticepop #close-addpopup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px; /* Larger close icon */
+    font-weight: bold;
+    color: #333333; /* Neutral close button color */
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+#close-addpopup:hover {
+    color: #e31616; /* Red hover color for the close button */
+}
+
+#Upload {
+    cursor: pointer;
+    font-size: medium;
+    color: #ffffff;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    padding: 10px 15px; /* Increased padding for a better button look */
+    border: none;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+#Upload:hover {
+    background: #828582; /* Existing hover effect retained */
+}
+
+#upload-btn {
+    width: 100%; /* Centers the button horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* view result  */
+
+#Result {
+    position: fixed; /* Keeps popup fixed while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for focus */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures popup is on top */
+    cursor: default; /* Avoids pointer confusion */
+}
+
+.Res_popup {
+    width: 40%;
+    max-width: 500px; /* Limits popup size on smaller screens */
+    height: auto; /* Adjusts height based on content */
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: larger;
+    padding: 20px; /* Improved spacing around content */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Darker shadow for emphasis */
+    justify-content: center;
+    align-items: center;
+}
+
+.Res_popup h2 {
+    font-size: 24px; /* Larger heading for clarity */
+    color: #333333; /* Darker text color for contrast */
+    margin-bottom: 10px;
+}
+
+.Res_popup hr {
+    width: 80%;
+    border: none;
+    height: 1px;
+    background-color: #cccccc; /* Subtle line separator */
+    margin: 15px 0;
+}
+
+.Res_popup form {
+    width: 100%; /* Form takes full popup width */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between inputs */
+}
+
+.Res_popup form select {
+    width: 100%; /* Select elements span the full width */
+    padding: 10px; /* Comfortable padding */
+    font-size: medium;
+    border: 1px solid #cccccc; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box;
+    background-color: #ffffff; /* Ensures contrast with text */
+}
+
+.Res_popup form select:focus {
+    outline: none;
+    border: 1px solid #4CAF50; /* Highlighted border on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Subtle glow effect */
+}
+
+.Res_popup #close-respopup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px; /* Larger close button */
+    font-weight: bold;
+    color: #333333; /* Neutral close button color */
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+#close-respopup:hover {
+    color: #e31616; /* Red hover effect for close button */
+}
+
+#viewbtn {
+    cursor: pointer;
+    font-size: medium;
+    color: #ffffff;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    padding: 10px 15px; /* Better padding for button appearance */
+    border: none;
+    text-decoration: none; /* Removes underline from link */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+#viewbtn:hover {
+    background: #828582; /* Retains existing hover effect */
+}
+
+#submitbtn {
+    width: 100%; /* Centers the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* add faculty  */
+#faculty-popup{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.faculty-request{
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px 5px 10px 5px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.faculty-request #close-faculty{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.faculty-request #close-faculty:hover{
+    color: #e31616;
+}
+.table {
+    margin-top: 10px;
+    border: 2px solid #161414;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th, .table td {
+    border: 1px solid #b9aeae;
+    padding: 8px;
+    text-align: center;
+}
+.table th {
+    background: #f2f2f2;
+}
+.approve-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.approve-btn:hover {
+    background: #45a049;
+}
+#approveStudent{
+	background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+#approveStudent:hover {
+	background: #45a049;
+}
+#rejectStudent{
+	background: #e83838;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+#rejectStudent:hover {
+	background: #ff1616;
+}
+ /* view profile  */
+ #profilePopup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+#profilePopup-content {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        width: fit-content;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        position: relative;
+       
+} 
+#profile-table {
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    border: 2px solid #161414;
+    width: 100%;
+    border-collapse: collapse;
+}
+#profile-table th, #profile-table td {
+    border: 1px solid #b9aeae;
+    padding: 8px;
+    text-align: center;
+}
+#profile-table th {
+    background: #f2f2f2;
+}
+#closeProfilePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}  
+#closeProfilePopup:hover {
+    color: #000;
+}
+.close1{
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close1:hover {
+    color: #000;
+}
+p{
+    font-size: larger;
+} 
+/* current course  */
+#CoursePopup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed positioning for consistent placement */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for focus */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+#CoursePopup-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 50%;
+    max-width: 600px; /* Limits the width on larger screens */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Adds a polished shadow */
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between elements */
+}
+
+#closecoursePopup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#closecoursePopup:hover {
+    color: #000; /* Dark hover effect for the close button */
+}
+
+.Courses-Button1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wraps buttons on smaller screens */
+    gap: 15px; /* Adds spacing between buttons */
+}
+
+#CoursePopup-content button {
+    background-color: #85eb4af5;
+    border-radius: 10px;
+    font-size: large;
+    color: #000;
+    font-family: serif;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 15px 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    width: 100px; /* Fixed button width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#CoursePopup-content button:hover {
+    background-color: #28a750; /* Slightly darker hover effect */
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+#CoursePopup-content button a {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits button text color */
+}
+
+.close2 {
+    font-size: 20px;
+    color: #aaa;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.close2:hover {
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    #CoursePopup-content {
+        width: 90%; /* Full width on smaller screens */
+        padding: 20px;
+    }
+
+    #CoursePopup-content button {
+        width: 80%; /* Adjust button width for smaller devices */
+        padding: 10px 15px;
+    }
+}
+
+/* add student  */
+#admission-popup{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.admission-request{
+    width:95%;
+    margin-top:5px;
+    overflow-y: auto;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px 5px 10px 5px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.admission-request #close-addmission{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.admission-request #close-addmission:hover{
+    color: #e31616;
+}
+.table {
+    margin-top: 10px;
+    border: 2px solid #161414;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th, .table td {
+    border: 1px solid #b9aeae;
+    padding: 8px;
+    text-align: center;
+}
+.table th {
+    background: #f2f2f2;
+}
+.approve-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.approve-btn:hover {
+    background: #45a049;
+}
+/* footer */
+footer {
+    width: 100vw;
+    height: fit-content;
+    flex-direction: space-around;
+    padding: 20px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    & p {
+    	position:absolute;
+    	right:50%;
+    	transform: translateX(50%);
+    	bottom:0;
+        margin-top: 10px;   
+    }
+}
+/*Add course form*/
+#AddCourse {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  z-index: 1000;
+}
+
+#AddCourseContent {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+#AddCourseContent h1 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+}
+
+#AddCourseContent .Courses-Button1 form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#AddCourseContent .Courses-Button1 input[type="text"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#AddCourseContent .Courses-Button1 .short-field {
+  width: 60%; /* Adjust width for short input */
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+#AddCourseContent .Courses-Button1 .submit-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+#AddCourseContent .Courses-Button1 input[type="submit"] {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex-shrink: 0; /* Ensures button size remains consistent */
+}
+
+#AddCourseContent .Courses-Button1 input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#AddCourse #closecoursePopup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#AddCourse #closecoursePopup .close2 {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+#AddCourse #closecoursePopup .close2:hover {
+  color: #ff0000;
+}
+/* mobile screen */
+@media screen and (max-width: 600px) {
+    /* General styles */
+    html, body {
+        font-size: 14px;
+    }
+
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    #College-Logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .logout-button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+    .profile img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .btn {
+        width: 80%;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    /* Main Content */
+    .main-content {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .courses {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .courses button {
+        width: 45%;
+        /* padding: 15px; */
+        /* font-size: 1rem; */
+        font-size: small;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+
+    /* Popups */
+    #profilePopup-content, #CoursePopup-content {
+        width: 80%;
+        padding: 20px;
+    }
+
+    #closeProfilePopup, #closecoursePopup {
+        font-size: medium;
+    }
+}
+#Result, #profilePopup, #CoursePopup,#Reg-popup, #hod-popup, #Add-Notice,#faculty-popup, #CoursePopup, #admission-popup,#AddCourse{
+	 animation: fadeIn 0.5s ease-in-out; 
+}
+#AddCourseContent, .admission-request,#CoursePopup-content, #profilePopup-content,.faculty-request,.Res_popup,.Add_noticepop,.hod-request,.Reg-Enrol_popup{
+	 animation: slideIn 0.5s ease-in-out; 
+}
+@keyframes fadeIn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
